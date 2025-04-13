@@ -21,22 +21,23 @@
   
     <meta name="description" content="一、问题概述在 WPF 中，试图通过  NAudio 库实现多音轨音频播放时，程序运行之后不能听到声音。 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576usin">
 <meta property="og:type" content="article">
-<meta property="og:title" content="陌离的个人博客">
-<meta property="og:url" content="http://blog.morely.top/2025/04/11/%E9%9F%B3%E9%A2%91%E6%97%A0%E6%B3%95%E6%92%AD%E6%94%BE%EF%BC%9A%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F%E4%B8%8E%E7%B1%BB%E5%AD%97%E6%AE%B5%E7%9A%84%E6%B7%B7%E6%B7%86%E5%92%8C%E6%BB%A5%E7%94%A8%E9%97%AE%E9%A2%98/index.html">
+<meta property="og:title" content="音频无法播放：局部变量与类字段的混淆和滥用问题">
+<meta property="og:url" content="http://blog.morely.top/2025/02/05/%E9%9F%B3%E9%A2%91%E6%97%A0%E6%B3%95%E6%92%AD%E6%94%BE%EF%BC%9A%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F%E4%B8%8E%E7%B1%BB%E5%AD%97%E6%AE%B5%E7%9A%84%E6%B7%B7%E6%B7%86%E5%92%8C%E6%BB%A5%E7%94%A8%E9%97%AE%E9%A2%98/index.html">
 <meta property="og:site_name" content="陌离的个人博客">
 <meta property="og:description" content="一、问题概述在 WPF 中，试图通过  NAudio 库实现多音轨音频播放时，程序运行之后不能听到声音。 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576usin">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://blog.morely.top/2025/04/11/%E9%9F%B3%E9%A2%91%E6%97%A0%E6%B3%95%E6%92%AD%E6%94%BE%EF%BC%9A%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F%E4%B8%8E%E7%B1%BB%E5%AD%97%E6%AE%B5%E7%9A%84%E6%B7%B7%E6%B7%86%E5%92%8C%E6%BB%A5%E7%94%A8%E9%97%AE%E9%A2%98/%E6%9C%AA%E5%91%BD%E5%90%8D-20250205124929280.png">
-<meta property="og:image" content="http://blog.morely.top/2025/04/11/%E9%9F%B3%E9%A2%91%E6%97%A0%E6%B3%95%E6%92%AD%E6%94%BE%EF%BC%9A%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F%E4%B8%8E%E7%B1%BB%E5%AD%97%E6%AE%B5%E7%9A%84%E6%B7%B7%E6%B7%86%E5%92%8C%E6%BB%A5%E7%94%A8%E9%97%AE%E9%A2%98/%E6%9C%AA%E5%91%BD%E5%90%8D-20250205125110116.png">
-<meta property="article:published_time" content="2025-04-11T09:28:32.251Z">
-<meta property="article:modified_time" content="2025-04-13T23:48:54.958Z">
+<meta property="og:image" content="http://blog.morely.top/2025/02/05/%E9%9F%B3%E9%A2%91%E6%97%A0%E6%B3%95%E6%92%AD%E6%94%BE%EF%BC%9A%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F%E4%B8%8E%E7%B1%BB%E5%AD%97%E6%AE%B5%E7%9A%84%E6%B7%B7%E6%B7%86%E5%92%8C%E6%BB%A5%E7%94%A8%E9%97%AE%E9%A2%98/%E6%9C%AA%E5%91%BD%E5%90%8D-20250205124929280.png">
+<meta property="og:image" content="http://blog.morely.top/2025/02/05/%E9%9F%B3%E9%A2%91%E6%97%A0%E6%B3%95%E6%92%AD%E6%94%BE%EF%BC%9A%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F%E4%B8%8E%E7%B1%BB%E5%AD%97%E6%AE%B5%E7%9A%84%E6%B7%B7%E6%B7%86%E5%92%8C%E6%BB%A5%E7%94%A8%E9%97%AE%E9%A2%98/%E6%9C%AA%E5%91%BD%E5%90%8D-20250205125110116.png">
+<meta property="article:published_time" content="2025-02-05T05:35:00.000Z">
+<meta property="article:modified_time" content="2025-04-13T23:50:59.881Z">
 <meta property="article:author" content="陌离">
+<meta property="article:tag" content="C#">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://blog.morely.top/2025/04/11/%E9%9F%B3%E9%A2%91%E6%97%A0%E6%B3%95%E6%92%AD%E6%94%BE%EF%BC%9A%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F%E4%B8%8E%E7%B1%BB%E5%AD%97%E6%AE%B5%E7%9A%84%E6%B7%B7%E6%B7%86%E5%92%8C%E6%BB%A5%E7%94%A8%E9%97%AE%E9%A2%98/%E6%9C%AA%E5%91%BD%E5%90%8D-20250205124929280.png">
+<meta name="twitter:image" content="http://blog.morely.top/2025/02/05/%E9%9F%B3%E9%A2%91%E6%97%A0%E6%B3%95%E6%92%AD%E6%94%BE%EF%BC%9A%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F%E4%B8%8E%E7%B1%BB%E5%AD%97%E6%AE%B5%E7%9A%84%E6%B7%B7%E6%B7%86%E5%92%8C%E6%BB%A5%E7%94%A8%E9%97%AE%E9%A2%98/%E6%9C%AA%E5%91%BD%E5%90%8D-20250205124929280.png">
   
   
   
-  <title>陌离的个人博客</title>
+  <title>音频无法播放：局部变量与类字段的混淆和滥用问题 - 陌离的个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -213,7 +214,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text=""></span>
+            <span id="subtitle" data-typed-text="音频无法播放：局部变量与类字段的混淆和滥用问题"></span>
           
         </div>
 
@@ -224,8 +225,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-04-11 17:28" pubdate>
-          2025年4月11日 下午
+        <time datetime="2025-02-05 13:35" pubdate>
+          2025年2月5日 下午
         </time>
       </span>
     
@@ -284,7 +285,7 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header"></h1>
+            <h1 id="seo-header">音频无法播放：局部变量与类字段的混淆和滥用问题</h1>
             
             
               <div class="markdown-body">
@@ -311,12 +312,12 @@
 <li>最开始我考虑了文件加载失败的情况，但是在尝试了使用绝对路径以及将属性修改为资源或者内容之后，没有报告找不到文件的错误，似乎可以排除这种情况。</li>
 <li>然后我想到是不是有可能多次初始化了<code>_players</code>列表，导致其意外清空？<ul>
 <li>查找代码中出现<code>_players</code>的语句，似乎只有一次初始化，可以排除这种情况。</li>
-<li><img src="/2025/04/11/%E9%9F%B3%E9%A2%91%E6%97%A0%E6%B3%95%E6%92%AD%E6%94%BE%EF%BC%9A%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F%E4%B8%8E%E7%B1%BB%E5%AD%97%E6%AE%B5%E7%9A%84%E6%B7%B7%E6%B7%86%E5%92%8C%E6%BB%A5%E7%94%A8%E9%97%AE%E9%A2%98/%E6%9C%AA%E5%91%BD%E5%90%8D-20250205124929280.png" srcset="/img/loading.gif" lazyload></li>
+<li><img src="/2025/02/05/%E9%9F%B3%E9%A2%91%E6%97%A0%E6%B3%95%E6%92%AD%E6%94%BE%EF%BC%9A%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F%E4%B8%8E%E7%B1%BB%E5%AD%97%E6%AE%B5%E7%9A%84%E6%B7%B7%E6%B7%86%E5%92%8C%E6%BB%A5%E7%94%A8%E9%97%AE%E9%A2%98/%E6%9C%AA%E5%91%BD%E5%90%8D-20250205124929280.png" srcset="/img/loading.gif" lazyload></li>
 </ul>
 </li>
 <li>最后我突然想到，在页面初始化时似乎将<code>AudioManager</code>类实例化了一次，但是在后面的代码中好像也看到了类似的<code>new</code>语句，是不是多次实例化了<code>AudioManager</code>呢？<ul>
 <li>查找代码中的<code>new AudioManager()</code>语句，果然查到了两次：</li>
-<li><img src="/2025/04/11/%E9%9F%B3%E9%A2%91%E6%97%A0%E6%B3%95%E6%92%AD%E6%94%BE%EF%BC%9A%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F%E4%B8%8E%E7%B1%BB%E5%AD%97%E6%AE%B5%E7%9A%84%E6%B7%B7%E6%B7%86%E5%92%8C%E6%BB%A5%E7%94%A8%E9%97%AE%E9%A2%98/%E6%9C%AA%E5%91%BD%E5%90%8D-20250205125110116.png" srcset="/img/loading.gif" lazyload><blockquote>
+<li><img src="/2025/02/05/%E9%9F%B3%E9%A2%91%E6%97%A0%E6%B3%95%E6%92%AD%E6%94%BE%EF%BC%9A%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F%E4%B8%8E%E7%B1%BB%E5%AD%97%E6%AE%B5%E7%9A%84%E6%B7%B7%E6%B7%86%E5%92%8C%E6%BB%A5%E7%94%A8%E9%97%AE%E9%A2%98/%E6%9C%AA%E5%91%BD%E5%90%8D-20250205125110116.png" srcset="/img/loading.gif" lazyload><blockquote>
 <p>[!INFO] 根据上述分析，问题出现在多次实例化<code>AudioManager</code>类:</p>
 <ol>
 <li>在<code>MainWindow</code>类中，实例化了一次，在这里是一个类字段，属于 <code>MainWindow</code> 类的成员变量，生命周期与 <code>MainWindow</code> 实例相同。</li>
@@ -374,6 +375,41 @@
             <div>
               <div class="post-metas my-3">
   
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/" class="category-chain-item">踩坑记录</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/WPF/" class="category-chain-item">WPF</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/C/" class="print-no-link">#C#</a>
+      
+    </div>
   
 </div>
 
@@ -383,8 +419,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div></div>
-      <div>http://blog.morely.top/2025/04/11/音频无法播放：局部变量与类字段的混淆和滥用问题/</div>
+      <div>音频无法播放：局部变量与类字段的混淆和滥用问题</div>
+      <div>http://blog.morely.top/2025/02/05/音频无法播放：局部变量与类字段的混淆和滥用问题/</div>
     </div>
     <div class="license-meta">
       
@@ -396,7 +432,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年4月11日</div>
+          <div>2025年2月5日</div>
         </div>
       
       
@@ -428,15 +464,15 @@
                   <article class="post-prev col-6">
                     
                     
+                      <a href="/2025/02/05/OBS%20Studio%E5%BD%95%E5%B1%8F%E5%A3%B0%E9%9F%B3%E5%BC%82%E5%B8%B8%E5%8F%91%E9%97%B7%E9%97%AE%E9%A2%98/" title="OBS Studio录屏声音异常发闷问题">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">OBS Studio录屏声音异常发闷问题</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
                   </article>
                   <article class="post-next col-6">
                     
-                    
-                      <a href="/2025/02/10/JSON%E4%BF%9D%E5%AD%98%E8%AE%BE%E7%BD%AE%E9%A1%B9%E5%BC%82%E5%B8%B8%E5%A4%8D%E5%8E%9F%E9%97%AE%E9%A2%98/" title="JSON保存设置项异常复原问题">
-                        <span class="hidden-mobile">JSON保存设置项异常复原问题</span>
-                        <span class="visible-mobile">下一篇</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
                     
                   </article>
                 </div>
