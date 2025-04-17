@@ -19,12 +19,12 @@
   <meta name="author" content="陌离">
   <meta name="keywords" content="">
   
-    <meta name="description" content="声明：本篇笔记摘自《Web前端技术 - 航空工业出版社》，遵循CC BY 4.0协议。 存在由AI生成的小部分内容，仅供参考，请仔细甄别可能存在的错误。    一、HTML概述 HTML (HyperText Markup Language，超文本标记语言) 是用于创建和设计网页的标准标记语言。它通过一系列 标签(Tags) 定义网页的结构和内容，浏览器会解析这些标签并渲染成用户看到的页面。">
+    <meta name="description" content="声明：本篇笔记摘自《Web前端技术 - 航空工业出版社》，遵循CC BY 4.0协议。 存在由AI生成的小部分内容，仅供参考，请仔细甄别可能存在的错误。 由于技术的迭代，部分标签已被新版本的HTML弃用，本篇笔记对其中一些标注了(已废弃)字样，但可能存在误标、漏标等情况，请以最新标准为准。    一、HTML概述 HTML (HyperText Markup Language，超文本标记语言)">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Web学习笔记(一)：HTML篇">
 <meta property="og:url" content="http://blog.morely.top/2025/04/17/Web%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9AHTML%E7%AF%87/index.html">
 <meta property="og:site_name" content="陌离的个人博客">
-<meta property="og:description" content="声明：本篇笔记摘自《Web前端技术 - 航空工业出版社》，遵循CC BY 4.0协议。 存在由AI生成的小部分内容，仅供参考，请仔细甄别可能存在的错误。    一、HTML概述 HTML (HyperText Markup Language，超文本标记语言) 是用于创建和设计网页的标准标记语言。它通过一系列 标签(Tags) 定义网页的结构和内容，浏览器会解析这些标签并渲染成用户看到的页面。">
+<meta property="og:description" content="声明：本篇笔记摘自《Web前端技术 - 航空工业出版社》，遵循CC BY 4.0协议。 存在由AI生成的小部分内容，仅供参考，请仔细甄别可能存在的错误。 由于技术的迭代，部分标签已被新版本的HTML弃用，本篇笔记对其中一些标注了(已废弃)字样，但可能存在误标、漏标等情况，请以最新标准为准。    一、HTML概述 HTML (HyperText Markup Language，超文本标记语言)">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://blog.morely.top/2025/04/17/Web%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9AHTML%E7%AF%87/Web%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE%E5%8F%8A%E5%B1%9E%E6%80%A7%E6%A0%B7%E5%BC%8F-20250316074722163.png">
 <meta property="og:image" content="http://blog.morely.top/2025/04/17/Web%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9AHTML%E7%AF%87/Web%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE%E5%8F%8A%E5%B1%9E%E6%80%A7%E6%A0%B7%E5%BC%8F-20250317192024390.png">
@@ -34,7 +34,7 @@
 <meta property="og:image" content="http://blog.morely.top/2025/04/17/Web%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9AHTML%E7%AF%87/Web%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E4%B8%80)%EF%BC%9AHTML%E7%AF%87-20250417200335718.png">
 <meta property="og:image" content="http://blog.morely.top/2025/04/17/Web%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9AHTML%E7%AF%87/Web%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E4%B8%80)%EF%BC%9AHTML%E7%AF%87-20250417200631467.png">
 <meta property="article:published_time" content="2025-04-17T12:29:01.000Z">
-<meta property="article:modified_time" content="2025-04-17T23:38:51.601Z">
+<meta property="article:modified_time" content="2025-04-17T23:57:03.674Z">
 <meta property="article:author" content="陌离">
 <meta property="article:tag" content="Web">
 <meta property="article:tag" content="HTML">
@@ -249,7 +249,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          5.5k 字
+          5.6k 字
         
       </span>
     
@@ -260,7 +260,7 @@
         
         
         
-          46 分钟
+          47 分钟
         
       </span>
     
@@ -304,7 +304,8 @@
                 
                 <blockquote>
 <p>声明：本篇笔记摘自<a target="_blank" rel="noopener" href="https://www.wenjingketang.com/bookinfo?book_id=9310">《Web前端技术 - 航空工业出版社》</a>，遵循<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by/4.0/legalcode.zh-hans">CC BY 4.0协议</a>。<br />
-存在由AI生成的小部分内容，仅供参考，请仔细甄别可能存在的错误。</p>
+存在由AI生成的小部分内容，仅供参考，请仔细甄别可能存在的错误。<br />
+由于技术的迭代，部分标签已被新版本的HTML弃用，本篇笔记对其中一些标注了(已废弃)字样，但可能存在误标、漏标等情况，请以最新标准为准。</p>
 </blockquote>
 <hr />
 <h1 id="一-html概述"><a class="markdownIt-Anchor" href="#一-html概述"></a> 一、HTML概述</h1>
@@ -364,8 +365,8 @@
 <li><code>&lt;i&gt;</code>：只有斜体效果，无强调作用。</li>
 </ul>
 </li>
-<li><code>&lt;sup&gt;</code>：标记上标，如<span class='katex-error' title='ParseError: KaTeX parse error: Can&#039;t use function &#039;\textcircled&#039; in math mode at position 14: \html@mathml{\̲t̲e̲x̲t̲c̲i̲r̲c̲l̲e̲d̲{\scriptsize R}…'>x^{2}、Register^{®}</span>。</li>
-<li><code>&lt;sub&gt;</code>：标记下标，如<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mn>1</mn></msub><mtext>、</mtext><mi>C</mi><mi>a</mi><mi>C</mi><msub><mi>O</mi><mn>3</mn></msub></mrow><annotation encoding="application/x-tex">x_{1}、CaCO_{3}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord cjk_fallback">、</span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mord mathnormal">a</span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">3</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>。</li>
+<li><code>&lt;sup&gt;</code>：标记上标，如<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>x</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">x^{2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span>、注册商标<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mrow></mrow><mrow><mi>T</mi><mi>M</mi></mrow></msup></mrow><annotation encoding="application/x-tex">^{TM}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8413309999999999em;vertical-align:0em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8413309999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span><span class="mord mathnormal mtight" style="margin-right:0.10903em;">M</span></span></span></span></span></span></span></span></span></span></span></span>。</li>
+<li><code>&lt;sub&gt;</code>：标记下标，如<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">x_{1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>、<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mi>a</mi><mi>C</mi><msub><mi>O</mi><mn>3</mn></msub></mrow><annotation encoding="application/x-tex">CaCO_{3}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mord mathnormal">a</span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">3</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>。</li>
 <li><code>&lt;ins&gt;</code> (insert)：表示插入的文本，默认添加下划线样式。</li>
 <li><code>&lt;del&gt;</code> (delete)：表示删除的文本，默认添加删除线样式。</li>
 <li><code>&lt;abbr&gt;</code> (abbreviation)：标记简称或缩写词，鼠标悬停时使用气泡显示全称。
