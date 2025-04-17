@@ -74,13 +74,6 @@
 
   
   <url>
-    <loc>http://blog.morely.top/tags/OBS-Studio/</loc>
-    <lastmod>2025-04-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://blog.morely.top/tags/Visual-Studio/</loc>
     <lastmod>2025-04-17</lastmod>
     <changefreq>weekly</changefreq>
@@ -89,6 +82,13 @@
   
   <url>
     <loc>http://blog.morely.top/tags/WPF/</loc>
+    <lastmod>2025-04-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.morely.top/tags/OBS-Studio/</loc>
     <lastmod>2025-04-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -132,7 +132,7 @@
   </url>
   
   <url>
-    <loc>http://blog.morely.top/categories/%E7%A2%8E%E7%A2%8E%E5%BF%B5/</loc>
+    <loc>http://blog.morely.top/categories/%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/WPF/</loc>
     <lastmod>2025-04-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -146,14 +146,14 @@
   </url>
   
   <url>
-    <loc>http://blog.morely.top/categories/%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/WPF/</loc>
+    <loc>http://blog.morely.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2025-04-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://blog.morely.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
+    <loc>http://blog.morely.top/categories/%E7%A2%8E%E7%A2%8E%E5%BF%B5/</loc>
     <lastmod>2025-04-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
