@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>从CSDN提取文章为PDF</title>
+    <link href="/2025/04/30/%E4%BB%8ECSDN%E6%8F%90%E5%8F%96%E6%96%87%E7%AB%A0%E4%B8%BAPDF/"/>
+    <url>/2025/04/30/%E4%BB%8ECSDN%E6%8F%90%E5%8F%96%E6%96%87%E7%AB%A0%E4%B8%BAPDF/</url>
+    
+    <content type="html"><![CDATA[<h1 id="f12打开开发人员工具在控制台输入以下内容"><a class="markdownIt-Anchor" href="#f12打开开发人员工具在控制台输入以下内容"></a> F12打开开发人员工具，在控制台输入以下内容：</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs js">(<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)&#123;<br><span class="hljs-string">&#x27;use strict&#x27;</span>;<br><span class="hljs-keyword">var</span> articleBox = $(<span class="hljs-string">&quot;div.article_content&quot;</span>);<br>articleBox.<span class="hljs-title function_">removeAttr</span>(<span class="hljs-string">&quot;style&quot;</span>);<br>$(<span class="hljs-string">&quot;.hide-preCode-bt&quot;</span>).<span class="hljs-title function_">parents</span>(<span class="hljs-string">&quot;.author-pjw&quot;</span>).<span class="hljs-title function_">show</span>();<br>$(<span class="hljs-string">&quot;.hide-preCode-bt&quot;</span>).<span class="hljs-title function_">parents</span>(<span class="hljs-string">&quot;pre&quot;</span>).<span class="hljs-title function_">removeClass</span>(<span class="hljs-string">&quot;set-code-hide&quot;</span>);<br>$(<span class="hljs-string">&quot;.hide-preCode-bt&quot;</span>).<span class="hljs-title function_">parents</span>(<span class="hljs-string">&quot;.hide-preCode-box&quot;</span>).<span class="hljs-title function_">hide</span>().<span class="hljs-title function_">remove</span>();<br>$(<span class="hljs-string">&quot;#btn-readmore&quot;</span>).<span class="hljs-title function_">parent</span>().<span class="hljs-title function_">remove</span>();<br>$(<span class="hljs-string">&quot;#side&quot;</span>).<span class="hljs-title function_">remove</span>();<br>$(<span class="hljs-string">&quot;.csdn-side-toolbar, .template-box, .blog-footer-bottom, .left-toolbox, .toolbar-inside&quot;</span>).<span class="hljs-title function_">remove</span>();<br>$(<span class="hljs-string">&quot;.comment-box, .recommend-box, .more-toolbox, .article-info-box, .column-group-item&quot;</span>).<span class="hljs-title function_">remove</span>();<br>$(<span class="hljs-string">&quot;aside, .tool-box, .recommend-nps-box, .skill-tree-box&quot;</span>).<span class="hljs-title function_">remove</span>();<br>$(<span class="hljs-string">&quot;main&quot;</span>).<span class="hljs-title function_">css</span>(<span class="hljs-string">&#x27;display&#x27;</span>,<span class="hljs-string">&#x27;content&#x27;</span>); <br>$(<span class="hljs-string">&quot;main&quot;</span>).<span class="hljs-title function_">css</span>(<span class="hljs-string">&#x27;float&#x27;</span>,<span class="hljs-string">&#x27;left&#x27;</span>); <br>$(<span class="hljs-string">&quot;#mainBox&quot;</span>).<span class="hljs-title function_">width</span>(<span class="hljs-string">&quot;100%&quot;</span>);<br><span class="hljs-variable language_">document</span>.<span class="hljs-title function_">getElementsByTagName</span>(<span class="hljs-string">&#x27;body&#x27;</span>)[<span class="hljs-number">0</span>].<span class="hljs-property">style</span>.<span class="hljs-property">zoom</span>=<span class="hljs-number">0.8</span>;<br><span class="hljs-variable language_">window</span>.<span class="hljs-title function_">print</span>();<br>&#125;)();<br></code></pre></td></tr></table></figure><p>会自动启动PDF打印机，设置相关参数然后保存即可。</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>CSDN</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>AI大模型API调用的相关概念</title>
     <link href="/2025/04/26/AI%E5%A4%A7%E6%A8%A1%E5%9E%8BAPI%E8%B0%83%E7%94%A8%E7%9A%84%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5/"/>
     <url>/2025/04/26/AI%E5%A4%A7%E6%A8%A1%E5%9E%8BAPI%E8%B0%83%E7%94%A8%E7%9A%84%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5/</url>
