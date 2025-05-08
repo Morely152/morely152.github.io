@@ -30,7 +30,7 @@
 <meta property="og:image" content="http://blog.morely.top/2025/05/07/Web%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89%EF%BC%9ACSS%E7%AF%87/20250506112846756.png">
 <meta property="og:image" content="http://blog.morely.top/2025/05/07/Web%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89%EF%BC%9ACSS%E7%AF%87/20250506113046770.png">
 <meta property="article:published_time" content="2025-05-07T11:18:32.000Z">
-<meta property="article:modified_time" content="2025-05-08T01:53:18.407Z">
+<meta property="article:modified_time" content="2025-05-08T14:08:36.507Z">
 <meta property="article:author" content="陌离">
 <meta property="article:tag" content="Web">
 <meta property="article:tag" content="HTML">
@@ -245,7 +245,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.9k 字
+          2.9k 字
         
       </span>
     
@@ -256,7 +256,7 @@
         
         
         
-          16 分钟
+          25 分钟
         
       </span>
     
@@ -584,10 +584,187 @@
 </ul>
 <hr />
 <h1 id="三-css3常用属性"><a class="markdownIt-Anchor" href="#三-css3常用属性"></a> 三、CSS3常用属性</h1>
-<h2 id="1文本属性"><a class="markdownIt-Anchor" href="#1文本属性"></a> 1.文本属性</h2>
-<h2 id="2图像属性"><a class="markdownIt-Anchor" href="#2图像属性"></a> 2.图像属性</h2>
-<h2 id="3列表属性"><a class="markdownIt-Anchor" href="#3列表属性"></a> 3.列表属性</h2>
-<h2 id="4超链接属性"><a class="markdownIt-Anchor" href="#4超链接属性"></a> 4.超链接属性</h2>
+<h2 id="1css3常用长度单位"><a class="markdownIt-Anchor" href="#1css3常用长度单位"></a> 1.CSS3常用长度单位</h2>
+<ul>
+<li>绝对长度：是固定不变的长度，多用于可以固定大小或位置的情况
+<ul>
+<li>cm - 厘米</li>
+<li>mm - 毫米</li>
+<li>in - 英寸(inch)</li>
+<li><strong>px - 像素(pixel)</strong> <mark>[常用]</mark></li>
+<li>pt - 点(point)</li>
+<li>pc - 派卡(pica)</li>
+<li>换算关系：1in = 2.54cm = 25.4 mm = 72pt = 6pc[^3]</li>
+</ul>
+</li>
+<li>相对长度：是相对于另一个长度属性的长度，多用于响应式布局
+<ul>
+<li>em - 相对于元素的字体大小</li>
+<li>ex - 相对于当前字体的高度</li>
+<li>ch - 相对于&quot;0&quot;的宽度</li>
+<li>rem - 相对于根元素的字体大小</li>
+<li>vw - 相对于视口(浏览器窗口)宽度的1%</li>
+<li>vh - 相对于视口(浏览器窗口)高度的1%</li>
+<li>vmin - 相对于视口(浏览器窗口)宽度的1%</li>
+<li>vmax - 相对于视口(浏览器窗口)宽度的1%</li>
+<li><strong>% - 相对于父元素的尺寸</strong> <mark>[常用]</mark></li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>在不同的分辨率下，像素点的大小是不同的。所以同一个网页，以px作长度单位时，在不同的分辨率下显示的大小是不同的。在低分辨率下，像素点较大，细节不够清晰，显示的页面也大，但模糊不清。<br />
+实际上,无论是相对还是绝对单位,最终都转化为px。所以一般来说，在网页制作时，基本单位都选择px而不是pt，因为pt也是通过浏览器的DPI转换成px显示（比如FireFox的DPI是96，则有9pt = 12px）。不仅pt，cm/in/mm等都是转换成px的。所以无论用绝对还是相对，在不同分辨率下都是会变的。不要认为把长度设置为3cm，它就会在不同的分辨率下保持3cm不变。[^3]</p>
+</blockquote>
+<h2 id="2文本属性"><a class="markdownIt-Anchor" href="#2文本属性"></a> 2.文本属性</h2>
+<h3 id="1-字体样式font-"><a class="markdownIt-Anchor" href="#1-字体样式font-"></a> ① 字体样式（font-*）</h3>
+<ul>
+<li>字体样式
+<ul>
+<li>格式：font-family: “”;</li>
+<li>示例：<code>p &#123;font-family: &quot;宋体&quot;&#125;</code>、<code>span &#123;font-family: &quot;Times New Roman&quot;&#125;</code></li>
+<li>备注：&quot;Times New Roman&quot;多用于数字的字体</li>
+</ul>
+</li>
+<li>字号(字体大小)样式
+<ul>
+<li>格式：font-size: 值 | 关键字;</li>
+<li>示例：<code>p &#123;font-size: 20px;&#125;</code></li>
+<li>备注：
+<ul>
+<li>值可以取以px、em、pt等为单位的数值，也可以取基于父元素或默认值的百分比。</li>
+<li>关键字包括xx-smal、x-small、small、large、x-large、xx-large，以及根据父元素字体大小变化的smaller和larger。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>字体粗细样式：
+<ul>
+<li>格式：font-weight: <strong>normal(正常)</strong> | bold(加粗) | lighter(减细) | number(100-900之间的九个数值);</li>
+<li>示例：<code>p &#123;font-weight: blod;&#125;</code></li>
+<li>备注：Win环境下，文本默认字体为&quot;微软雅黑&quot;，仅支持400与700两种字粗，设置为其他值时会用这两种效果替换，可能看不出变换。</li>
+</ul>
+</li>
+<li>字体风格样式：
+<ul>
+<li>格式：font-style: <strong>normal(正常)</strong> | italic(斜体) | oblique(倾斜)</li>
+<li>示例：<code>span &#123;font-style: italic;&#125;</code></li>
+<li>备注：oblique适用于没有斜体样式的字体，将其强制倾斜。</li>
+</ul>
+</li>
+</ul>
+<h3 id="2文本格式text-"><a class="markdownIt-Anchor" href="#2文本格式text-"></a> ②文本格式(text-*)</h3>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>格式</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>缩进</td>
+<td>text-indent: <strong>0</strong> | 缩进长度;</td>
+<td>长度可以是pm、em、pt、%</td>
+</tr>
+<tr>
+<td>水平对齐</td>
+<td>text-align: <strong>left</strong> | right | center | justify(两端对齐);</td>
+<td></td>
+</tr>
+<tr>
+<td>修饰</td>
+<td>text-decoration: <strong>none</strong> | underline | overline | line-through(删除线);</td>
+<td></td>
+</tr>
+<tr>
+<td>省略</td>
+<td>text-overflow: <strong>clip(不省略)</strong> | ellipsis(省略)</td>
+<td>隐藏文本宽度过大溢出的部分，用…标记</td>
+</tr>
+<tr>
+<td>字符间距</td>
+<td>word-spacing: <strong>normal(无间距)</strong> | 间距值;</td>
+<td>字母之间的间距，默认为0</td>
+</tr>
+<tr>
+<td>单词间距</td>
+<td>letter-spacing: <strong>normal(正常间距)</strong> | 间距值;</td>
+<td>单词之间的间距</td>
+</tr>
+<tr>
+<td>行高</td>
+<td>line-height: <strong>normal(正常行高)</strong> | number(当前字体高度的倍数) | 高度值;</td>
+<td></td>
+</tr>
+<tr>
+<td>自动换行</td>
+<td>word-break: <strong>normal(浏览器规则)</strong> | break-all(可截断单词) | keep-all(只在空格处换行);</td>
+<td></td>
+</tr>
+<tr>
+<td>空白符处理</td>
+<td>white-space: <strong>normal(忽略空白)</strong> | nowrap | pre | pre-line | pre-wrap;</td>
+<td>较为复杂，用时再查询规则，此处忽略。</td>
+</tr>
+<tr>
+<td>溢出内容处理</td>
+<td>overflow: <strong>visible(溢出在边框外)</strong> | hidden | scroll(始终提供滚动条) | auto(有溢出时提供滚动条);</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="3图像属性"><a class="markdownIt-Anchor" href="#3图像属性"></a> 3.图像属性</h2>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>格式</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>宽度</td>
+<td>border-width:</td>
+<td></td>
+</tr>
+<tr>
+<td>高度</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>边框宽度</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>边框风格</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>边框颜色</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>备注：
+<ul>
+<li>属性值列表中标注了<code>*4</code>的，表示可以设置1-4个值，分别控制：<strong>上-右-下-左 | 上-左右-下 | 上下-左右 | 上-右-下-左</strong>。</li>
+<li></li>
+</ul>
+</li>
+</ul>
+<h2 id="4列表属性"><a class="markdownIt-Anchor" href="#4列表属性"></a> 4.列表属性</h2>
 <h2 id="5表格属性"><a class="markdownIt-Anchor" href="#5表格属性"></a> 5.表格属性</h2>
 <h2 id="6表单属性"><a class="markdownIt-Anchor" href="#6表单属性"></a> 6.表单属性</h2>
 <hr />
