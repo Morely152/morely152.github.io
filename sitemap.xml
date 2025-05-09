@@ -145,6 +145,13 @@
   </url>
   
   <url>
+    <loc>http://blog.morely.top/tags/CSS/</loc>
+    <lastmod>2025-05-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://blog.morely.top/tags/HTML/</loc>
     <lastmod>2025-05-09</lastmod>
     <changefreq>weekly</changefreq>
@@ -218,6 +225,13 @@
   
   <url>
     <loc>http://blog.morely.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Web/</loc>
+    <lastmod>2025-05-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.morely.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Web/CSS/</loc>
     <lastmod>2025-05-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
