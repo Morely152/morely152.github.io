@@ -2,15 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://blog.morely.top/2025/05/14/%E4%B8%8B%E8%BD%BD%E9%93%BE%E6%8E%A5%E6%B5%8B%E8%AF%95/</loc>
-    
-    <lastmod>2025-05-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://blog.morely.top/2025/05/12/Web%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89%EF%BC%9ACSS%E7%AF%87/</loc>
     
     <lastmod>2025-05-12</lastmod>
@@ -119,13 +110,6 @@
 
   
   <url>
-    <loc>http://blog.morely.top/tags/AI/</loc>
-    <lastmod>2025-05-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://blog.morely.top/tags/Visual-Studio/</loc>
     <lastmod>2025-05-14</lastmod>
     <changefreq>weekly</changefreq>
@@ -134,6 +118,13 @@
   
   <url>
     <loc>http://blog.morely.top/tags/WPF/</loc>
+    <lastmod>2025-05-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.morely.top/tags/AI/</loc>
     <lastmod>2025-05-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -219,14 +210,14 @@
   </url>
   
   <url>
-    <loc>http://blog.morely.top/categories/%E7%A2%8E%E7%A2%8E%E5%BF%B5/</loc>
+    <loc>http://blog.morely.top/categories/%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/OBS-Studio/</loc>
     <lastmod>2025-05-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://blog.morely.top/categories/%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/OBS-Studio/</loc>
+    <loc>http://blog.morely.top/categories/%E7%A2%8E%E7%A2%8E%E5%BF%B5/</loc>
     <lastmod>2025-05-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
