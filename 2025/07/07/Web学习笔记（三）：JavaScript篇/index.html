@@ -22,24 +22,28 @@
     <meta name="description" content="声明：本篇笔记部分摘自《Web前端技术 - 航空工业出版社》，遵循CC BY 4.0协议。 存在由AI生成的小部分内容，仅供参考，请仔细甄别可能存在的错误。    一、JavaScript概述  JavaScript 是一种高级、解释型编程语言，主要用于网页开发。它运行在浏览器中，能动态操作网页内容（如DOM）、处理用户交互、发送网络请求等。特点包括：  动态性：无需编译，代码可直接运行。 面">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Web学习笔记（三）：JavaScript篇">
-<meta property="og:url" content="http://blog.morely.top/2025/07/01/Web%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%89%EF%BC%89%EF%BC%9AJavaScript%E7%AF%87/index.html">
+<meta property="og:url" content="http://blog.morely.top/2025/07/07/Web%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%89%EF%BC%89%EF%BC%9AJavaScript%E7%AF%87/index.html">
 <meta property="og:site_name" content="陌离的个人博客">
 <meta property="og:description" content="声明：本篇笔记部分摘自《Web前端技术 - 航空工业出版社》，遵循CC BY 4.0协议。 存在由AI生成的小部分内容，仅供参考，请仔细甄别可能存在的错误。    一、JavaScript概述  JavaScript 是一种高级、解释型编程语言，主要用于网页开发。它运行在浏览器中，能动态操作网页内容（如DOM）、处理用户交互、发送网络请求等。特点包括：  动态性：无需编译，代码可直接运行。 面">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://blog.morely.top/2025/07/01/Web%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%89%EF%BC%89%EF%BC%9AJavaScript%E7%AF%87/20250520081716000.png">
-<meta property="og:image" content="http://blog.morely.top/2025/07/01/Web%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%89%EF%BC%89%EF%BC%9AJavaScript%E7%AF%87/20250520082256298.png">
-<meta property="og:image" content="http://blog.morely.top/2025/07/01/Web%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%89%EF%BC%89%EF%BC%9AJavaScript%E7%AF%87/20250523100337688.png">
-<meta property="og:image" content="http://blog.morely.top/2025/07/01/Web%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%89%EF%BC%89%EF%BC%9AJavaScript%E7%AF%87/20250520083211096.png">
-<meta property="og:image" content="http://blog.morely.top/2025/07/01/Web%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%89%EF%BC%89%EF%BC%9AJavaScript%E7%AF%87/20250520083410880.png">
-<meta property="og:image" content="http://blog.morely.top/2025/07/01/Web%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%89%EF%BC%89%EF%BC%9AJavaScript%E7%AF%87/20250630002900286.png">
-<meta property="og:image" content="http://blog.morely.top/2025/07/01/Web%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%89%EF%BC%89%EF%BC%9AJavaScript%E7%AF%87/20250701111045475.jpg">
-<meta property="article:published_time" content="2025-07-01T03:19:47.000Z">
-<meta property="article:modified_time" content="2025-07-01T03:19:55.808Z">
+<meta property="og:image" content="http://blog.morely.top/2025/07/07/Web%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%89%EF%BC%89%EF%BC%9AJavaScript%E7%AF%87/20250520081716000.png">
+<meta property="og:image" content="http://blog.morely.top/2025/07/07/Web%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%89%EF%BC%89%EF%BC%9AJavaScript%E7%AF%87/20250520082256298.png">
+<meta property="og:image" content="http://blog.morely.top/2025/07/07/Web%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%89%EF%BC%89%EF%BC%9AJavaScript%E7%AF%87/20250523100337688.png">
+<meta property="og:image" content="http://blog.morely.top/2025/07/07/Web%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%89%EF%BC%89%EF%BC%9AJavaScript%E7%AF%87/20250520083211096.png">
+<meta property="og:image" content="http://blog.morely.top/2025/07/07/Web%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%89%EF%BC%89%EF%BC%9AJavaScript%E7%AF%87/20250520083410880.png">
+<meta property="og:image" content="http://blog.morely.top/2025/07/07/Web%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%89%EF%BC%89%EF%BC%9AJavaScript%E7%AF%87/20250630002900286.png">
+<meta property="og:image" content="http://blog.morely.top/2025/07/07/Web%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%89%EF%BC%89%EF%BC%9AJavaScript%E7%AF%87/20250701111045475.jpg">
+<meta property="og:image" content="http://blog.morely.top/2025/07/07/Web%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%89%EF%BC%89%EF%BC%9AJavaScript%E7%AF%87/20250706173010664.png">
+<meta property="og:image" content="http://blog.morely.top/2025/07/07/Web%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%89%EF%BC%89%EF%BC%9AJavaScript%E7%AF%87/20250707093103236.png">
+<meta property="og:image" content="http://blog.morely.top/2025/07/07/Web%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%89%EF%BC%89%EF%BC%9AJavaScript%E7%AF%87/20250707093134884.png">
+<meta property="og:image" content="http://blog.morely.top/2025/07/07/Web%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%89%EF%BC%89%EF%BC%9AJavaScript%E7%AF%87/20250707093202219.png">
+<meta property="article:published_time" content="2025-07-07T09:46:17.000Z">
+<meta property="article:modified_time" content="2025-07-07T09:46:25.157Z">
 <meta property="article:author" content="陌离">
 <meta property="article:tag" content="Web">
 <meta property="article:tag" content="JavaScript">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://blog.morely.top/2025/07/01/Web%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%89%EF%BC%89%EF%BC%9AJavaScript%E7%AF%87/20250520081716000.png">
+<meta name="twitter:image" content="http://blog.morely.top/2025/07/07/Web%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%89%EF%BC%89%EF%BC%9AJavaScript%E7%AF%87/20250520081716000.png">
   
   
   
@@ -237,8 +241,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-07-01 11:19" pubdate>
-          2025年7月1日 上午
+        <time datetime="2025-07-07 17:46" pubdate>
+          2025年7月7日 下午
         </time>
       </span>
     
@@ -249,7 +253,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          6.8k 字
+          11k 字
         
       </span>
     
@@ -260,7 +264,7 @@
         
         
         
-          57 分钟
+          93 分钟
         
       </span>
     
@@ -661,6 +665,27 @@ ECMAScript 6发布了正式版本。&quot; ——《Web前端技术》P207</p>
 </ul>
 <h3 id="3-函数的嵌套与递归"><a class="markdownIt-Anchor" href="#3-函数的嵌套与递归"></a> ③ 函数的嵌套与递归</h3>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// 嵌套：在函数中定义另一个函数</span><br><span class="hljs-keyword">function</span> <span class="hljs-title function_">putOut</span>(<span class="hljs-params"></span>) &#123;<br>	<span class="hljs-keyword">function</span> <span class="hljs-title function_">putIn</span>(<span class="hljs-params">x, y</span>) &#123;<br>		<span class="hljs-title function_">alert</span>(x + y);<br>	&#125;<br>	<span class="hljs-keyword">return</span> <span class="hljs-title function_">putIn</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>);<br>&#125;<br><br><span class="hljs-comment">// 递归：在函数体中调用函数本身</span><br><span class="hljs-keyword">function</span> <span class="hljs-title function_">factorial</span>(<span class="hljs-params">n</span>) &#123;<br>	<span class="hljs-keyword">if</span> (n &lt;= <span class="hljs-number">1</span>) &#123;<br>		<span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;<br>	&#125;<br>	<span class="hljs-keyword">return</span> n * <span class="hljs-title function_">factorial</span>(n - <span class="hljs-number">1</span>);<br>&#125;<br></code></pre></td></tr></table></figure>
+<h2 id="2箭头函数"><a class="markdownIt-Anchor" href="#2箭头函数"></a> 2.箭头函数</h2>
+<ul>
+<li>箭头函数（Arrow Functions）是ES6引入的一种更简洁的函数语法形式。它使用 <code>=&gt;</code> 符号定义函数：</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">const</span> <span class="hljs-title function_">add</span> = (<span class="hljs-params">a, b</span>) =&gt; &#123;        <span class="hljs-comment">// 定义add函数，返回两参之和</span><br>	<span class="hljs-keyword">return</span> a + b;<br>&#125;<br><br><span class="hljs-comment">// 单参数时可省略括号</span><br><span class="hljs-keyword">const</span> <span class="hljs-title function_">square</span> = x =&gt; &#123;          <span class="hljs-comment">// 定义square函数，返回二次幂</span><br>	<span class="hljs-keyword">return</span> x * x;<br>&#125;<br><br><span class="hljs-comment">// 函数体只有一行时，可以直接写成</span><br><span class="hljs-keyword">const</span> <span class="hljs-title function_">sqare</span> = x =&gt; x * x;<br><br><span class="hljs-comment">// 无参数时，需要写空括号</span><br><span class="hljs-keyword">const</span> <span class="hljs-title function_">greet</span> = (<span class="hljs-params"></span>) =&gt; <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&quot;Hello!&quot;</span>);<br></code></pre></td></tr></table></figure>
+<ul>
+<li>箭头函数没有自己的 <code>this</code>，继承自外围作用域。</li>
+<li>常用在回调函数中，如数组方法、事件处理等。</li>
+</ul>
+<h2 id="3回调函数"><a class="markdownIt-Anchor" href="#3回调函数"></a> 3.回调函数</h2>
+<ul>
+<li>回调函数是指<strong>作为参数传递给另一个函数，并在该函数内部被调用的函数</strong>。回调函数允许我们在某个操作完成或某个事件发生后执行特定的代码。</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// 简单的回调函数示例</span><br><span class="hljs-keyword">function</span> <span class="hljs-title function_">greet</span>(<span class="hljs-params">name, callback</span>) &#123;     <span class="hljs-comment">// 第二个参数是函数，这个参数在该函数的末尾被调用，即为回调函数</span><br>  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">`Hello, <span class="hljs-subst">$&#123;name&#125;</span>!`</span>);<br>  <span class="hljs-title function_">callback</span>(); <span class="hljs-comment">// 调用回调函数</span><br>&#125;<br><br><span class="hljs-keyword">function</span> <span class="hljs-title function_">sayGoodbye</span>(<span class="hljs-params"></span>) &#123;<br>  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;Goodbye!&#x27;</span>);<br>&#125;<br><br><span class="hljs-title function_">greet</span>(<span class="hljs-string">&#x27;Alice&#x27;</span>, sayGoodbye); <span class="hljs-comment">// 将sayGoodbye作为回调函数传入</span><br></code></pre></td></tr></table></figure>
+<h3 id="javascript中回调函数的特点"><a class="markdownIt-Anchor" href="#javascript中回调函数的特点"></a> JavaScript中回调函数的特点</h3>
+<ul>
+<li>异步编程的核心机制：定时器、文件读写、网络请求等</li>
+<li>函数可以像变量一样被传递、赋值和返回</li>
+<li>控制反转：被调用方决定何时调用回调函数</li>
+<li>多层嵌套回调，也会导致代码难以阅读和维护（Callback Hell，回调地狱）</li>
+</ul>
 <h1 id="八-对象"><a class="markdownIt-Anchor" href="#八-对象"></a> 八、对象</h1>
 <blockquote>
 <p>在实际编程中，不仅存在来自客观世界的具体对象，还存在着一些为了解决问题引入的，较为抽象的对象。对象可以理解为属性和方法的集合，用户通过操作方法，访问或设置对象的属性，从而实现不同的功能。</p>
@@ -1398,6 +1423,7 @@ ECMAScript 6发布了正式版本。&quot; ——《Web前端技术》P207</p>
 </li>
 </ul>
 <h1 id="十一-bom"><a class="markdownIt-Anchor" href="#十一-bom"></a> 十一、BOM</h1>
+<h2 id="1bom概述"><a class="markdownIt-Anchor" href="#1bom概述"></a> 1.BOM概述</h2>
 <blockquote>
 <p>BOM(browser object model,浏览器对象模型)提供了独立于内容的、可与浏览器窗口进行互动的对象结构，方便使用浏览器开放的功能实现更强大的网站。 --《Web前端技术》P250</p>
 </blockquote>
@@ -1410,14 +1436,589 @@ ECMAScript 6发布了正式版本。&quot; ——《Web前端技术》P207</p>
 </ul>
 </li>
 </ul>
+<h2 id="2window对象浏览器打开的窗口"><a class="markdownIt-Anchor" href="#2window对象浏览器打开的窗口"></a> 2.window对象：浏览器打开的窗口</h2>
+<ul>
+<li>window对象表示浏览器打开的窗口。如果HTML文档中包含<code>&lt;frame&gt;</code>或<code>&lt;iframe&gt;</code>标签，浏览器将会对每个框架创建一个window对象，并将它们放在frames集合中。</li>
+<li>window对象的常用属性与方法见下表：</li>
+</ul>
+<table><thead><tr><th>类型</th><th>名称</th><th>说明</th></tr></thead><tbody><tr><td rowspan="6">属性</td><td>name</td><td>设置或返回窗口的名称</td></tr><tr><td>opener</td><td>返回创建当前窗口的窗口</td></tr><tr><td>self</td><td>返回当前窗口，等价于 window 对象</td></tr><tr><td>top</td><td>返回最顶层窗口</td></tr><tr><td>parent</td><td>返回当前窗口的父窗口</td></tr><tr><td>frames</td><td>获取页面中的所有框架</td></tr><tr><td rowspan="10">方法</td><td>alert(警告信息字符串)</td><td>显示警告对话框，用于提示用户注意某些事项</td></tr><tr><td>confirm(确认信息字符串)</td><td>显示确认对话框，有 “确认” 和 “取消” 两个按钮，单击 “确认” 按钮返回 true，单击 “取消” 按钮返回 false</td></tr><tr><td>prompt(提示字符串)</td><td>显示提示输入信息对话框，返回用户输入信息</td></tr><tr><td>open(URL, target, features, replace)</td><td>打开一个新的浏览器窗口或查找一个已命名的窗口</td></tr><tr><td>close()</td><td>关闭浏览器窗口</td></tr><tr><td>setTimeout(code, millisec)</td><td>在指定毫秒数（millisec）后调用函数或计算表达式（code）</td></tr><tr><td>clearTimeout(id_of_settimeout)</td><td>取消 setTimeout 设置的定时器。id_of_settimeout 表示由 setTimeout()返回的 ID 值，该值标识要取消的延迟执行代码块</td></tr><tr><td>setInterval(code, millisec)</td><td>按照指定的周期（以毫秒计）调用函数或计算表达式</td></tr><tr><td>clearInterval(id_of_setinterval)</td><td>取消 setInterval 设置的定时器。id_of_setinterval 表示由 setInterval()返回的 ID 值</td></tr></tbody></table>
+### ① 打开和关闭浏览器窗口
+- `open(URL, name, features, replace)`方法中包含4个参数：
+	- `URL`表示将要打开的网页地址，若为空则打开空白页
+	- `target`表示网页加载的形式，可选值如下：
+		- `_blank`:默认参数，打开一个新窗口
+		- `_self`:在当前窗口访问URL
+		- `_top`:在任何可加载的框架集访问对应URL
+		- `_parent`:在父框架访问对应URL
+		- `name`:使用自定义窗口名称打开一个新窗口
+	- `features`参数表示新打开页面的基本属性，可选值如下：
+		- `channelmode = yes | no`:是否使用剧院模式显示窗口（默认为no）,仅限IE
+		- `directories = yes | no`:是否添加目录按钮，默认为yes，仅限IE
+		- `fullscrean = yes | no`:是否使用全屏模式，默认为no，仅限IE
+		- `height = 像素值`:窗口高度，最小值为100
+		- `width = 像素值`:窗口宽度，最小值为100
+		- `left = 像素值`:该窗口的左侧位置
+		- `top = 像素值`:该窗口的顶部位置
+		- `location = yes | no`:是否显示地址字段，默认为yes
+		- `menubar = yes | no`:是否显示菜单栏，默认为yes
+		- `resizable = yes | no`:窗口是否可调节尺寸，默认为yes
+		- `scrollbars = yes | no`:是否显示滚动条，默认为yes
+		- `status = yes | no`:是否添加状态栏，默认为yes
+		- `titlebar = yes | no`:是否显示标题栏，默认为yes
+		- `toolbar = yes | no`:是否显示浏览器工具栏，默认为yes
+	- `features`中的设置仅在`target`参数为`_blank`时有效
+	- 使用`open()`方法打开新窗口后，返回值为新窗口的窗口对象，使用此对象的`close()`方法可以将窗口关闭。如下所示：
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">var</span> new_window = <span class="hljs-variable language_">window</span>.<span class="hljs-title function_">open</span>(<span class="hljs-string">&quot;www.baidu.com&quot;</span>, <span class="hljs-string">&quot;_blank&quot;</span>); <span class="hljs-comment">// 打开百度</span><br>new_window.<span class="hljs-title function_">close</span>(); <span class="hljs-comment">// 关闭窗口</span><br></code></pre></td></tr></table></figure>
+### ② 设置和取消定时器
+#### 延迟定时器：延迟一段时间后执行操作
+- 设置：`setTimeout()`
+- 取消：`clearTimeout()`
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">let</span> timeoutTimer = <span class="hljs-literal">null</span>;<br><br>timeoutTimer = <span class="hljs-built_in">setTimeout</span>(<span class="hljs-function">() =&gt;</span> &#123;<br>	<span class="hljs-comment">// 延迟执行的操作</span><br>	<br>	<span class="hljs-keyword">if</span> (<span class="hljs-comment">/*取消定时器的条件*/</span>) &#123;<br>		<span class="hljs-built_in">clearTimeout</span>(timeoutTimer);<br>	&#125;<br>&#125;, <span class="hljs-comment">/*延迟时间（ms）*/</span>);<br></code></pre></td></tr></table></figure>
+#### 周期定时器：按指定周期执行操作
+- 设置：`setInterval()`
+- 取消：`clearInterval()`
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">let</span> timeoutTimer = <span class="hljs-literal">null</span>; <br><br>intervalTimer = <span class="hljs-built_in">setInterval</span>(<span class="hljs-function">() =&gt;</span> &#123;<br>	<span class="hljs-comment">// 周期执行的操作</span><br>	<br>	<span class="hljs-keyword">if</span> (<span class="hljs-comment">/*取消定时器的条件*/</span>) &#123;<br>		<span class="hljs-built_in">clearInterval</span>(intervalTimer);<br>	&#125;<br>&#125;, <span class="hljs-comment">/*执行周期（ms）*/</span>);<br></code></pre></td></tr></table></figure>
+## 2.location对象：地址栏对象
+- 用于获取或管理浏览器地址栏中的相关数据，如获取当前网页地址，从一个网页跳转到另一个网页等。
+- 常见locatio对象的属性及方法见下表：
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>href</td>
+<td>返回完整的URL路径</td>
+</tr>
+<tr>
+<td>protocol</td>
+<td>返回URPL协议</td>
+</tr>
+<tr>
+<td>host</td>
+<td>返回URL的域名，包含端口号</td>
+</tr>
+<tr>
+<td>hostname</td>
+<td>返回URL的域名，不含端口号</td>
+</tr>
+<tr>
+<td>pathnamne</td>
+<td>返回URL的路径</td>
+</tr>
+<tr>
+<td>port</td>
+<td>返回URL的端口号</td>
+</tr>
+<tr>
+<td>search</td>
+<td>返回URL的参数</td>
+</tr>
+<tr>
+<td>hash</td>
+<td>返回URL的hash值</td>
+</tr>
+<tr>
+<td>reload()</td>
+<td>刷新当前URL的页面</td>
+</tr>
+<tr>
+<td>replace()</td>
+<td>使用另一个URL地址替换当前URL</td>
+</tr>
+<tr>
+<td>assign()</td>
+<td>跳转到另一个URL</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>location对象既是window对象的属性，也是document对象的属性，即<code>window.location</code>和<code>document.location</code>的写法等价。日常开发中，通常使用<code>window.location</code>或直接写<code>location</code>。</li>
+</ul>
+<h2 id="3history对象历史对象"><a class="markdownIt-Anchor" href="#3history对象历史对象"></a> 3.history对象：历史对象</h2>
+<ul>
+<li>用于记录浏览器的历史访问操作，存储当前窗口访问过的所有网页历史记录。</li>
+<li>其常用属性和方法如下表：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>length</td>
+<td>历史列表中的网址数量</td>
+</tr>
+<tr>
+<td>state</td>
+<td>当前历史记录的状态，默认为null，仅<code>pushState()</code>和<code>replaceState()</code>生成的历史记录才有值</td>
+</tr>
+<tr>
+<td>scrollRestoration</td>
+<td>前进后退的滚动行为，可选值为<code>auto</code>、<code>manual</code></td>
+</tr>
+<tr>
+<td>back()</td>
+<td>返回到上一个历史记录</td>
+</tr>
+<tr>
+<td>forward()</td>
+<td>前进到下一个历史记录</td>
+</tr>
+<tr>
+<td>go()</td>
+<td>前往某一个历史记录</td>
+</tr>
+<tr>
+<td>pushState()</td>
+<td>新建一个历史记录，不刷新页面</td>
+</tr>
+<tr>
+<td>replaceState()</td>
+<td>新创建一个历史记录并覆盖当前历史，不刷新页面</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>go(-1)</code>与<code>back()</code>功能一致，都可以返回上个页面</li>
+<li><code>go(1)</code>与<code>foward()</code>功能一致，都可以前进道下一个页面</li>
+</ul>
+<h2 id="4navigator对象浏览器对象"><a class="markdownIt-Anchor" href="#4navigator对象浏览器对象"></a> 4.navigator对象：浏览器对象</h2>
+<ul>
+<li>主要用于获取浏览器的相关信息，如浏览器名称、浏览器版本等。</li>
+<li>主流浏览器支持的常用属性与方法见下表：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>方法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>userAgent</td>
+<td>浏览器相关信息，用于在http请求中发送给服务端</td>
+</tr>
+<tr>
+<td>language</td>
+<td>浏览器语言</td>
+</tr>
+<tr>
+<td>cookieEnabled</td>
+<td>是否开启浏览器cookie</td>
+</tr>
+<tr>
+<td>appName</td>
+<td>完整浏览器名称（一般和实际浏览器不一致）</td>
+</tr>
+<tr>
+<td>appCodeName</td>
+<td>浏览器名称，几乎都为Mozilla</td>
+</tr>
+<tr>
+<td>appVersion</td>
+<td>浏览器版本和平台信息</td>
+</tr>
+<tr>
+<td>platform</td>
+<td>浏览器所在的操作系统平台</td>
+</tr>
+<tr>
+<td>sendBeacon()</td>
+<td>发送网络请求信息</td>
+</tr>
+<tr>
+<td>javaEnabled()</td>
+<td>是否在浏览器中启用Java</td>
+</tr>
+<tr>
+<td>示例：(Chrome + WIndows11环境)</td>
+<td></td>
+</tr>
+<tr>
+<td><img src="20250706173010664.png" srcset="/img/loading.gif" lazyload alt="" /></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <blockquote>
-<p>未完待续…</p>
+<p><code>navigator.appName</code> 和 <code>navigator.appCodeName</code> 的不准确性主要源于浏览器发展的历史遗留问题和兼容性策略。</p>
+<p>早期 Netscape 浏览器的 <code>appName</code> 返回 <code>&quot;Netscape&quot;</code>，而 IE 返回 <code>&quot;Microsoft Internet Explorer&quot;</code>，但现代浏览器（如 Chrome、Firefox、Edge）为了兼容旧网站（可能依赖 <code>appName</code> 检测浏览器），默认沿用 <code>&quot;Netscape&quot;</code>，避免被错误拦截。此外，W3C 并未规范该属性，因此浏览器厂商无需更新它。</p>
+<p>而 <code>appCodeName</code> 普遍返回 <code>&quot;Mozilla&quot;</code>，则是因为初代 Netscape 的代码名是 <code>&quot;Mozilla&quot;</code>（意为 “Mosaic Killer”），其 User-Agent 格式被后续浏览器（包括 IE、Chrome 等）沿用，以绕过早期的服务器端检测。如今，所有主流浏览器仍默认返回 <code>&quot;Mozilla&quot;</code>，以保持对老旧网站的兼容性。</p>
+<p>若要准确识别浏览器，建议解析 <code>navigator.userAgent</code> 或使用特性检测而非依赖这些过时属性。</p>
 </blockquote>
+<h2 id="5screen对象屏幕对象"><a class="markdownIt-Anchor" href="#5screen对象屏幕对象"></a> 5.screen对象：屏幕对象</h2>
+<ul>
+<li>用于获取屏幕的相关信息，如宽度、高度、分辨率等。</li>
+<li>主流浏览器常用screen属性及方法见下表：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>width</td>
+<td>返回设备屏幕宽度</td>
+</tr>
+<tr>
+<td>height</td>
+<td>返回设备屏幕高度</td>
+</tr>
+<tr>
+<td>availWidth</td>
+<td>返回设备屏幕可用宽度</td>
+</tr>
+<tr>
+<td>availHeight</td>
+<td>返回设备屏幕可用高度</td>
+</tr>
+<tr>
+<td>avalilTop</td>
+<td>返回屏幕顶部第一个像素点</td>
+</tr>
+<tr>
+<td>availLeft</td>
+<td>返回屏幕左侧第一个像素点</td>
+</tr>
+<tr>
+<td>orientation</td>
+<td>返回屏幕的方向（多用于移动设备的旋转适配）</td>
+</tr>
+<tr>
+<td>pixelDepth</td>
+<td>返回屏幕像素点</td>
+</tr>
+<tr>
+<td>colorDepth</td>
+<td>返回屏幕色彩深度</td>
+</tr>
+</tbody>
+</table>
 <h1 id="十二-事件"><a class="markdownIt-Anchor" href="#十二-事件"></a> 十二、事件</h1>
+<h2 id="1事件概述"><a class="markdownIt-Anchor" href="#1事件概述"></a> 1.事件概述</h2>
+<h3 id="1-认识事件"><a class="markdownIt-Anchor" href="#1-认识事件"></a> ① 认识事件</h3>
+<blockquote>
+<p>事件可以理解为JavaScript监测到的浏览器行为或用户行为，包括页面加载、鼠标单击、鼠标滑过某区域等。当JavaScript监测到这些事件时，执行一段程序来做出响应，就实现了用户与网页的交互。</p>
+</blockquote>
+<blockquote>
+<p>目前大多数浏览器（Chrome、Safari、Firefox等）都支持DOM 2级事件的核心部分，但IE9之前的IE浏览器仍使用自己的事件标准。当需要兼容IE8及更低版本的浏览器时，需要做好浏览器环境的兼容处理。</p>
+</blockquote>
+<h3 id="2-事件流"><a class="markdownIt-Anchor" href="#2-事件流"></a> ② 事件流</h3>
+<blockquote>
+<p>所谓事件流，就是指事件在子元素中发生时，其在各级元素中的流动与传播。例如子元素被点击时，认为子元素和其所有的父级元素均触发单击事件。</p>
+</blockquote>
+<h4 id="情景示例"><a class="markdownIt-Anchor" href="#情景示例"></a> 情景示例：</h4>
+<p>HTML文档结构如下：</p>
+<ul>
+<li>document
+<ul>
+<li>html
+<ul>
+<li>body
+<ul>
+<li>button<br />
+当文档中的button被点击时，认为上面四个对象均触发单击事件，如何处理这四个对象事件触发的顺序，即如何对安排这些事件处理程序的执行顺序？</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="事件冒泡"><a class="markdownIt-Anchor" href="#事件冒泡"></a> 事件冒泡</h4>
+<ul>
+<li>IE团队提出</li>
+<li>从最内层元素开始到最外层元素逐层触发</li>
+<li><img src="20250707093103236.png" srcset="/img/loading.gif" lazyload alt="" /></li>
+</ul>
+<h4 id="事件捕获"><a class="markdownIt-Anchor" href="#事件捕获"></a> 事件捕获</h4>
+<ul>
+<li>Netscape团队提出</li>
+<li>从最外层元素开始到最内层元素逐层触发</li>
+<li><img src="20250707093134884.png" srcset="/img/loading.gif" lazyload alt="" /></li>
+</ul>
+<h4 id="dom事件流"><a class="markdownIt-Anchor" href="#dom事件流"></a> DOM事件流</h4>
+<ul>
+<li>W3C制定的DOM事件流规范</li>
+<li><img src="20250707093202219.png" srcset="/img/loading.gif" lazyload alt="" />
+<ul>
+<li>事件发生后，首先事件捕获，但不对事件进行处理；</li>
+<li>然后进行到目标阶段，定位目标后执行当前元素对象的事件处理程序；</li>
+<li>最后实现数据冒泡，向外逐级处理事件。</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>老版本（IE8及以下）浏览器不支持DOM事件流。</p>
+</blockquote>
+<h2 id="2事件绑定"><a class="markdownIt-Anchor" href="#2事件绑定"></a> 2.事件绑定</h2>
+<h3 id="1-内联绑定"><a class="markdownIt-Anchor" href="#1-内联绑定"></a> ① 内联绑定</h3>
+<ul>
+<li>使用HTML标签的事件属性绑定事件</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs HTML"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onclick</span>=<span class="hljs-string">&quot;btnClicked&quot;</span>&gt;</span>点击弹窗<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="language-javascript"></span><br><span class="language-javascript">	<span class="hljs-keyword">function</span> <span class="hljs-title function_">btnClicked</span>(<span class="hljs-params"></span>) &#123;</span><br><span class="language-javascript">		<span class="hljs-title function_">alert</span>(<span class="hljs-string">&quot;检测到按钮被点击&quot;</span>);	</span><br><span class="language-javascript">	&#125;</span><br><span class="language-javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br></code></pre></td></tr></table></figure>
+<blockquote>
+<p>这种写法不利于HTML与JavaScript的分离，不建议使用。</p>
+</blockquote>
+<h3 id="2-动态绑定"><a class="markdownIt-Anchor" href="#2-动态绑定"></a> ② 动态绑定</h3>
+<ul>
+<li>使用元素对象的时间属性绑定事件，即在JavaScript中获取标签元素，然后利用标签元素的事件属性绑定事件的处理程序</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// HTML中有&lt;button id=&quot;target&quot;&gt;点击弹窗&lt;/button&gt;</span><br><span class="hljs-keyword">var</span> tar_element = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">getElementById</span>(<span class="hljs-string">&quot;target&quot;</span>);    <span class="hljs-comment">// 获取页面元素</span><br>tar_element.<span class="hljs-property">onclick</span> = <span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) &#123;                      <span class="hljs-comment">// 添加处理程序</span><br>	<span class="hljs-title function_">alert</span>(<span class="hljs-string">&quot;检测到按钮被点击&quot;</span>);	<br>&#125;<br></code></pre></td></tr></table></figure>
+<h3 id="3-事件监听"><a class="markdownIt-Anchor" href="#3-事件监听"></a> ③ 事件监听</h3>
+<ul>
+<li>利用DOM对象的事件监听方法绑定事件，即在JavaScript代码中获取标签元素，然后使用该元素调用addEventListener()方法绑定事件处理程序，语法格式如下：</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs js">element = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">getElementById</span>(<span class="hljs-string">&quot;目标元素ID&quot;</span>);<br><br>element.<span class="hljs-title function_">addEvenrListener</span>(事件， <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;<br>	响应程序<br>&#125;， <span class="hljs-literal">true</span>/<span class="hljs-literal">false</span>);<br></code></pre></td></tr></table></figure>
+<ul>
+<li><code>true/false</code>值可省略，默认/缺省为<code>false</code>，表示冒泡阶段执行；设为<code>true</code>表示捕获阶段执行</li>
+<li>使用此方法，可以为同一个元素添加多个事件处理程序，且标签元素触发事件时，所有该事件类型绑定的事件处理程序会按照绑定顺序依次调用执行</li>
+</ul>
+<h2 id="3事件element对象"><a class="markdownIt-Anchor" href="#3事件element对象"></a> 3.事件(element)对象</h2>
+<ul>
+<li>每触发一个事件时，都会产生一个事件对象，包含了与事件有关的所有信息。</li>
+<li>JavaScript会把产生的事件对象<code>event</code>作为参数传递给事件处理程序，方便开发人员获取事件信息。</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-variable language_">document</span>.<span class="hljs-title function_">getElementById</span>(<span class="hljs-string">&quot;confirm_btn&quot;</span>).<span class="hljs-property">onclick</span> = <span class="hljs-keyword">function</span>(<span class="hljs-params">event</span>) &#123;<br>	<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(event.<span class="hljs-property">type</span>);              <span class="hljs-comment">// 控制台输出click</span><br>&#125;<br></code></pre></td></tr></table></figure>
+<ul>
+<li>常用事件对象的属性及方法见下表：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>type</td>
+<td>返回事件类型</td>
+</tr>
+<tr>
+<td>target</td>
+<td>返回触发事件的目标元素</td>
+</tr>
+<tr>
+<td>currentTarget</td>
+<td>返回响应当前事件的元素</td>
+</tr>
+<tr>
+<td>bubbles</td>
+<td>该元素是否可以冒泡，返回一个布尔值</td>
+</tr>
+<tr>
+<td>cancelable</td>
+<td>是否可以取消事件的默认行为，返回一个布尔值</td>
+</tr>
+<tr>
+<td>eventPhrase</td>
+<td>返回事件所处的事件阶段：1、2、3分别表示捕获、目标、冒泡</td>
+</tr>
+<tr>
+<td>preventDefault()</td>
+<td>取消事件的默认行为，当<code>cancelable</code>为true时有效</td>
+</tr>
+<tr>
+<td>stopPropagation()</td>
+<td>阻止事件冒泡，在<code>bubbles</code>为true时有效</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>当点击子元素时，被直接点击的元素<code>eventPhrase</code>为2(目标阶段)，而父元素的<code>eventPhrase</code>为3(冒泡阶段)</li>
+<li>通过查询元素响应事件时的<code>eventPhrase</code>，能够判断元素是被直接点击，还是点击了其下的子元素。</li>
+</ul>
+<h2 id="4常见事件类型"><a class="markdownIt-Anchor" href="#4常见事件类型"></a> 4.常见事件类型</h2>
+<h3 id="1-鼠标事件"><a class="markdownIt-Anchor" href="#1-鼠标事件"></a> ① 鼠标事件</h3>
+<table>
+<thead>
+<tr>
+<th>事件名称</th>
+<th>触发场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>click</td>
+<td>鼠标单击</td>
+</tr>
+<tr>
+<td>dbclick</td>
+<td>鼠标双击</td>
+</tr>
+<tr>
+<td>mousedown</td>
+<td>按下任何按键</td>
+</tr>
+<tr>
+<td>mouseup</td>
+<td>释放鼠标按键</td>
+</tr>
+<tr>
+<td>mouseover</td>
+<td>鼠标进入元素区域</td>
+</tr>
+<tr>
+<td>mouseout</td>
+<td>鼠标离开元素区域</td>
+</tr>
+<tr>
+<td>mousemove</td>
+<td>鼠标在元素内移动</td>
+</tr>
+<tr>
+<td>mouseenter</td>
+<td>鼠标首次进入元素区域</td>
+</tr>
+<tr>
+<td>mouseleave</td>
+<td>鼠标离开元素区域</td>
+</tr>
+<tr>
+<td>mousewheel</td>
+<td>鼠标滚轮滑动</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>mouseleave和mouseout这两个事件的区别：
+<ul>
+<li><strong><code>mouseout</code></strong>：
+<ul>
+<li>只要鼠标离开<strong>当前元素的边界</strong>（包括进入子元素），就会触发。</li>
+<li>即从父元素进入子元素时，父元素会触发 <code>mouseout</code>，子元素会触发 <code>mouseover</code>。</li>
+</ul>
+</li>
+<li><strong><code>mouseleave</code></strong>：
+<ul>
+<li>只有鼠标<strong>完全离开当前元素及其所有子元素</strong>时才会触发。</li>
+<li>即在父元素和子元素之间移动不会触发父元素的 <code>mouseleave</code>。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-键盘事件"><a class="markdownIt-Anchor" href="#2-键盘事件"></a> ② 键盘事件</h3>
+<table>
+<thead>
+<tr>
+<th>事件名称</th>
+<th>触发场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>keydown</td>
+<td>按下键盘按键（长安多次触发）</td>
+</tr>
+<tr>
+<td>keyup</td>
+<td>松开键盘按键</td>
+</tr>
+<tr>
+<td>keypress</td>
+<td>按下键盘字符键（不包括Esc、Shift等）</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// 监听按下Enter键时，执行登录操作</span><br><span class="hljs-variable language_">document</span>.<span class="hljs-property">onkeydown</span> = <span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) &#123;<br>	<span class="hljs-keyword">if</span> (e.<span class="hljs-property">keyCode</span> == <span class="hljs-number">13</span>) &#123;<br>		<span class="hljs-title function_">login</span>();     <span class="hljs-comment">// 实现登录的方法</span><br>	&#125;<br>	<span class="hljs-keyword">else</span> <span class="hljs-keyword">return</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<ul>
+<li>触发此类事件时，事件对象的<code>keyCode</code>属性将返回一个键码。<a target="_blank" rel="noopener" href="https://tool.ip138.com/keycode/">点击查看常用按键-键码对照表</a><sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="查询网.KeyCode键盘按键码\[EB/OL]()\[2025-07-07]. https://tool.ip138.com/keycode/">[2]</span></a></sup></li>
+</ul>
+<h3 id="3-焦点事件"><a class="markdownIt-Anchor" href="#3-焦点事件"></a> ③ 焦点事件</h3>
+<table>
+<thead>
+<tr>
+<th>事件名称</th>
+<th>触发场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>focus</td>
+<td>文本框获取焦点</td>
+</tr>
+<tr>
+<td>blur</td>
+<td>文本框失去焦点</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>常用于输入检测，在文本框失焦时认为用户编辑完毕，对输入内容进行合法性检测。</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-variable language_">document</span>.<span class="hljs-title function_">getElementById</span>(<span class="hljs-string">&quot;phone&quot;</span>).<span class="hljs-title function_">addEventListener</span>(<span class="hljs-string">&quot;blur&quot;</span>, <span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) &#123;<br>  <span class="hljs-keyword">const</span> phoneInput = <span class="hljs-variable language_">this</span>.<span class="hljs-property">value</span>.<span class="hljs-title function_">trim</span>();<br>  <span class="hljs-keyword">const</span> phoneRegex = <span class="hljs-regexp">/^1[3-9]\d&#123;9&#125;$/</span>; <br>  <span class="hljs-comment">// 示例：中国大陆手机号（11位，1开头，第二位数字是3-9）</span><br>  <br>  <span class="hljs-keyword">if</span> (!phoneRegex.<span class="hljs-title function_">test</span>(phoneInput)) &#123;<br>    <span class="hljs-title function_">alert</span>(<span class="hljs-string">&quot;手机号无效，请重新输入！&quot;</span>);<br>    <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">focus</span>(); <span class="hljs-comment">// 焦点重新回到输入框</span><br>    <span class="hljs-variable language_">this</span>.<span class="hljs-property">style</span>.<span class="hljs-property">borderColor</span> = <span class="hljs-string">&quot;red&quot;</span>; <span class="hljs-comment">// 高亮错误输入</span><br>  &#125; <span class="hljs-keyword">else</span> &#123;<br>    <span class="hljs-variable language_">this</span>.<span class="hljs-property">style</span>.<span class="hljs-property">borderColor</span> = <span class="hljs-string">&quot;green&quot;</span>; <span class="hljs-comment">// 标识合法输入</span><br>  &#125;<br>&#125;);<br></code></pre></td></tr></table></figure>
+<h3 id="4-页面事件"><a class="markdownIt-Anchor" href="#4-页面事件"></a> ④ 页面事件</h3>
+<table>
+<thead>
+<tr>
+<th>事件名称</th>
+<th>触发场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>load</td>
+<td>页面完成加载/图片完成加载/框架完成加载</td>
+</tr>
+<tr>
+<td>unload</td>
+<td>页面或框架卸载</td>
+</tr>
+<tr>
+<td>scroll</td>
+<td>滚动页面或其他元素</td>
+</tr>
+<tr>
+<td>resize</td>
+<td>window的大小或框架大小发生变化</td>
+</tr>
+<tr>
+<td>error</td>
+<td>js执行出现异常，或<code>&lt;img&gt;</code>元素、框架加载失败</td>
+</tr>
+</tbody>
+</table>
+<h2 id="5事件优化"><a class="markdownIt-Anchor" href="#5事件优化"></a> 5.事件优化</h2>
+<h3 id="1-事件委托"><a class="markdownIt-Anchor" href="#1-事件委托"></a> ① 事件委托</h3>
+<ul>
+<li>事件委托(事件代理、事件托管)利用浏览器事件冒泡机制对事件的处理过程进行优化。</li>
+<li>例如，页面上存在很多按钮，单独为这些按钮绑定单击事件会占用大量资源。此时可以将事件绑到定它们的父元素上，能够节约计算机的资源，同时优化网页。</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs HTML"><span class="hljs-tag">&lt;<span class="hljs-name">button</span>&gt;</span>btn1<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">button</span>&gt;</span>btn2<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">button</span>&gt;</span>btn3<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><br><br><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="language-javascript"></span><br><span class="language-javascript">	<span class="hljs-variable language_">document</span>.<span class="hljs-property">body</span>.<span class="hljs-property">onclick</span> = <span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) &#123;</span><br><span class="language-javascript">		<span class="hljs-comment">// 事件对象的tagName为BUTTON,表明点击的是按钮</span></span><br><span class="language-javascript">		<span class="hljs-keyword">if</span> (e.<span class="hljs-property">target</span>.<span class="hljs-property">tagName</span> == <span class="hljs-string">&quot;BUTTON&quot;</span>) &#123;</span><br><span class="language-javascript">			<span class="hljs-keyword">if</span> (e.<span class="hljs-property">target</span>.<span class="hljs-property">innerText</span> == <span class="hljs-string">&quot;btn1&quot;</span>) &#123;</span><br><span class="language-javascript">				<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&quot;点击了btn1&quot;</span>);</span><br><span class="language-javascript">			&#125;</span><br><span class="language-javascript">		&#125;</span><br><span class="language-javascript">	&#125;</span><br><span class="language-javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br></code></pre></td></tr></table></figure>
+<h3 id="2-事件绑定删除"><a class="markdownIt-Anchor" href="#2-事件绑定删除"></a> ② 事件绑定删除</h3>
+<ul>
+<li>当网页中有元素绑定了事件时，这些事件会始终占用系统资源。
+<ul>
+<li>使用<code>addEventListener</code>、<code>onEvent</code>属性绑定的事件会在js将元素从HTML中去除时被自动回收，但是通过事件委托（监听父元素）绑定的事件不受影响。</li>
+<li>有些事件在触发一次后不再需要使用，或者有些事件不能在无用之后自动清除，需要手动设置清除逻辑（类似于C++中的<s>洗狗</s>析构操作）。</li>
+</ul>
+</li>
+<li>直接覆盖事件的定义，将其设置为<code>null</code>即可。</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// HTML中有：&lt;button id=&quot;target&quot;&gt;点击我&lt;/button&gt;</span><br><br><span class="hljs-keyword">var</span> btn = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">getElementById</span>(target);<br>btn.<span class="hljs-property">onclick</span> = <span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) &#123;<br>	<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&quot;btn被点击&quot;</span>);<br>&#125;<br>btn.<span class="hljs-property">onclick</span> = <span class="hljs-literal">null</span>;      <span class="hljs-comment">// 删除绑定事件</span><br></code></pre></td></tr></table></figure>
+<h3 id="3-事件监听删除"><a class="markdownIt-Anchor" href="#3-事件监听删除"></a> ③ 事件监听删除</h3>
+<ul>
+<li>使用<code>removeEventListener()</code>删除事件监听，其参数应当与<code>addEventListener()</code>一致。</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// 续上例</span><br>btn.<span class="hljs-title function_">addEventListener</span>(<span class="hljs-params"><span class="hljs-string">&quot;click&quot;</span>， handler, <span class="hljs-literal">false</span></span>) &#123;<br>	<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&quot;btn被点击&quot;</span>);<br>&#125;<br>btn.<span class="hljs-title function_">removeEventListener</span>(<span class="hljs-string">&quot;click&quot;</span>， handler, <span class="hljs-literal">false</span>);<br></code></pre></td></tr></table></figure>
 <hr />
 <h1 id="参考资料"><a class="markdownIt-Anchor" href="#参考资料"></a> 参考资料</h1>
 <section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span>王铁柱6.为什么说js是弱类型语言，它的优缺点分别是什么？[EB/OL].(2024-11-28)[2025-05-13]. <a target="_blank" rel="noopener" href="https://www.cnblogs.com/ai888/p/18573400">https://www.cnblogs.com/ai888/p/18573400</a>.
-<a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
+<a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span>查询网.KeyCode键盘按键码[EB/OL]()[2025-07-07]. <a target="_blank" rel="noopener" href="https://tool.ip138.com/keycode/">https://tool.ip138.com/keycode/</a>
+<a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
                 
               </div>
             
@@ -1479,7 +2080,7 @@ ECMAScript 6发布了正式版本。&quot; ——《Web前端技术》P207</p>
   <div class="license-box my-3">
     <div class="license-title">
       <div>Web学习笔记（三）：JavaScript篇</div>
-      <div>http://blog.morely.top/2025/07/01/Web学习笔记（三）：JavaScript篇/</div>
+      <div>http://blog.morely.top/2025/07/07/Web学习笔记（三）：JavaScript篇/</div>
     </div>
     <div class="license-meta">
       
@@ -1491,7 +2092,7 @@ ECMAScript 6发布了正式版本。&quot; ——《Web前端技术》P207</p>
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年7月1日</div>
+          <div>2025年7月7日</div>
         </div>
       
       
