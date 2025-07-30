@@ -19,27 +19,22 @@
   <meta name="author" content="陌离">
   <meta name="keywords" content="">
   
-    <meta name="description" content="本篇笔记部分内容整理自网络中的一些文章及视频，详见文末的“参考资料”部分。   一、开发工具介绍及常用调试方法 微信学堂：小程序开发起步 微信开放社区：调试能力-常用调试器面板使用  二、建立小程序项目 运行微信开发者工具,点击&quot;+&quot;按钮后，填写项目名称、目录等信息后，选择合适的模板后点击“创建”即可创建一个小程序项目。 其中，对一些基础模板的说明如下：    模板名称 特">
+    <meta name="description" content="本篇笔记部分内容整理自网络中的一些文章及视频，详见文末的“参考资料”部分。   一、WXML篇 WXML全称WeiXin Markup Language（微信标记语言），这是微信框架提供的一套标签语言。 我们在写HTML页面时，总是习惯使用div进行整体布局，使用span描述文本信息，使用img装载图片等等，但在WXML中会有一些差异。类似于vue，WXML提供的每个标签都是一个组件。  ●">
 <meta property="og:type" content="article">
-<meta property="og:title" content="微信小程序开发（一）：工具与起步">
-<meta property="og:url" content="http://blog.morely.top/2025/07/29/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9A%E5%B7%A5%E5%85%B7%E4%B8%8E%E8%B5%B7%E6%AD%A5/index.html">
+<meta property="og:title" content="微信小程序开发（二）：WXML与WXSS简介">
+<meta property="og:url" content="http://blog.morely.top/2025/07/30/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%EF%BC%88%E4%BA%8C%EF%BC%89%EF%BC%9AWXML%E4%B8%8EWXSS%E7%AE%80%E4%BB%8B/index.html">
 <meta property="og:site_name" content="陌离的个人博客">
-<meta property="og:description" content="本篇笔记部分内容整理自网络中的一些文章及视频，详见文末的“参考资料”部分。   一、开发工具介绍及常用调试方法 微信学堂：小程序开发起步 微信开放社区：调试能力-常用调试器面板使用  二、建立小程序项目 运行微信开发者工具,点击&quot;+&quot;按钮后，填写项目名称、目录等信息后，选择合适的模板后点击“创建”即可创建一个小程序项目。 其中，对一些基础模板的说明如下：    模板名称 特">
+<meta property="og:description" content="本篇笔记部分内容整理自网络中的一些文章及视频，详见文末的“参考资料”部分。   一、WXML篇 WXML全称WeiXin Markup Language（微信标记语言），这是微信框架提供的一套标签语言。 我们在写HTML页面时，总是习惯使用div进行整体布局，使用span描述文本信息，使用img装载图片等等，但在WXML中会有一些差异。类似于vue，WXML提供的每个标签都是一个组件。  ●">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://blog.morely.top/2025/07/29/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9A%E5%B7%A5%E5%85%B7%E4%B8%8E%E8%B5%B7%E6%AD%A5/20250728141458327.png">
-<meta property="og:image" content="http://blog.morely.top/2025/07/29/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9A%E5%B7%A5%E5%85%B7%E4%B8%8E%E8%B5%B7%E6%AD%A5/20250728133628228.png">
-<meta property="og:image" content="http://blog.morely.top/2025/07/29/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9A%E5%B7%A5%E5%85%B7%E4%B8%8E%E8%B5%B7%E6%AD%A5/20250728134705499.png">
-<meta property="og:image" content="http://blog.morely.top/2025/07/29/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9A%E5%B7%A5%E5%85%B7%E4%B8%8E%E8%B5%B7%E6%AD%A5/20250728135211032.gif">
-<meta property="article:published_time" content="2025-07-29T08:16:30.000Z">
-<meta property="article:modified_time" content="2025-07-29T08:23:11.492Z">
+<meta property="article:published_time" content="2025-07-30T00:58:18.000Z">
+<meta property="article:modified_time" content="2025-07-30T00:58:46.365Z">
 <meta property="article:author" content="陌离">
 <meta property="article:tag" content="微信小程序开发">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://blog.morely.top/2025/07/29/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9A%E5%B7%A5%E5%85%B7%E4%B8%8E%E8%B5%B7%E6%AD%A5/20250728141458327.png">
   
   
   
-  <title>微信小程序开发（一）：工具与起步 - 陌离的个人博客</title>
+  <title>微信小程序开发（二）：WXML与WXSS简介 - 陌离的个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -220,7 +215,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="微信小程序开发（一）：工具与起步"></span>
+            <span id="subtitle" data-typed-text="微信小程序开发（二）：WXML与WXSS简介"></span>
           
         </div>
 
@@ -231,8 +226,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-07-29 16:16" pubdate>
-          2025年7月29日 下午
+        <time datetime="2025-07-30 08:58" pubdate>
+          2025年7月30日 早上
         </time>
       </span>
     
@@ -243,7 +238,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.7k 字
+          1.1k 字
         
       </span>
     
@@ -254,7 +249,7 @@
         
         
         
-          15 分钟
+          10 分钟
         
       </span>
     
@@ -291,7 +286,7 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">微信小程序开发（一）：工具与起步</h1>
+            <h1 id="seo-header">微信小程序开发（二）：WXML与WXSS简介</h1>
             
             
               <div class="markdown-body">
@@ -300,112 +295,67 @@
 <blockquote>
 <p>本篇笔记部分内容整理自网络中的一些文章及视频，详见文末的“参考资料”部分。</p>
 </blockquote>
-<h1 id="一-开发工具介绍及常用调试方法"><a class="markdownIt-Anchor" href="#一-开发工具介绍及常用调试方法"></a> 一、开发工具介绍及常用调试方法</h1>
-<p>微信学堂：<a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/community/business/doc/0008e2af35095847dc88cb9015600d">小程序开发起步</a><br />
-微信开放社区：<a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/community/business/doc/000ce84ed20ec0aa45acded645bc0d">调试能力-常用调试器面板使用</a></p>
-<h1 id="二-建立小程序项目"><a class="markdownIt-Anchor" href="#二-建立小程序项目"></a> 二、建立小程序项目</h1>
-<p>运行<strong>微信开发者工具</strong>,点击&quot;+&quot;按钮后，填写项目名称、目录等信息后，选择合适的模板后点击“创建”即可创建一个小程序项目。<br />
-其中，对一些基础模板的说明如下：</p>
+<h1 id="一-wxml篇"><a class="markdownIt-Anchor" href="#一-wxml篇"></a> 一、WXML篇</h1>
+<p>WXML全称<code>WeiXin Markup Language</code>（微信标记语言），这是微信框架提供的一套标签语言。</p>
+<p>我们在写HTML页面时，总是习惯使用<code>div</code>进行整体布局，使用<code>span</code>描述文本信息，使用<code>img</code>装载图片等等，但在WXML中会有一些差异。类似于vue，WXML提供的每个标签都是一个组件。</p>
+<h2 id="组件的概念"><a class="markdownIt-Anchor" href="#组件的概念"></a> ● “组件”的概念</h2>
+<p>在编写代码时，通常将具有相同功能的代码写在一起，以提高代码复用性，如：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-class">.nav</span> &#123;<br>	<span class="hljs-attribute">display</span>: flex;<br>	<span class="hljs-attribute">justify-content</span>: space-around;<br>	<span class="hljs-attribute">background-color</span>: blue;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>上述代码用于定义一个样式集，用于控制所有<code>nav</code>类的标签。</p>
+<p>如果要很多地方都具有相同的内容（如导航栏、注册弹窗、每篇文章下的评论区），在每个地方都写一遍HTML+CSS+JavaScript会增加很多编码工作量，bug出现的可能性也会增加不少；需要修改这些组件时还需要到每一个组件的定义处修改，非常麻烦。</p>
+<p>换一个角度思考，将这些通用的HTML、CSS、JavaScript代码封装成一个<strong>组件</strong>进行独立管理，如同定义好的函数一样，就可以在多个页面的多个地方使用这些组件。需要修改组件内容时，只需修改一次组件的定义即可，使用组件的地方会跟着更新。</p>
+<p>要实现这个组件我们都得先定义好组件模板（HTML，决定组件结构），组件默认样式（CSS，决定组件外观），组件功能（JS，决定组件负责做哪些事）。在小程序框架中，官方已经提前帮我们实现了大量的组件，常见的有以下几种：</p>
 <table>
 <thead>
 <tr>
-<th>模板名称</th>
-<th>特点</th>
-<th>适用场景</th>
+<th style="text-align:center">视图组件</th>
+<th style="text-align:center">用途</th>
+<th style="text-align:center">等价HTML标签</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>JS - 基础模板</strong></td>
-<td>基于 JavaScript，灵活性高、上手快，模板简洁</td>
-<td>简单小程序（如个人博客、小型展示型）、初学者学习小程序基本开发原理</td>
+<td style="text-align:center"><code>&lt;view&gt;</code></td>
+<td style="text-align:center">容器布局</td>
+<td style="text-align:center"><code>&lt;div&gt;</code></td>
 </tr>
 <tr>
-<td><strong>TS - 基础模板</strong></td>
-<td>突出 TypeScript 的类型安全和可维护性，适合多人协作</td>
-<td>大型团队开发的小程序、对稳定性要求高的小程序（如金融类、医疗类）</td>
+<td style="text-align:center"><code>&lt;text&gt;</code></td>
+<td style="text-align:center">装载多行文本</td>
+<td style="text-align:center"><code>&lt;span&gt;</code></td>
 </tr>
 <tr>
-<td><strong>js_Skyline - 基础模板</strong></td>
-<td>基于 JavaScript，采用 Skyline 渲染引擎，性能高，精简 CSS 特性</td>
-<td>对性能要求极高的小程序（如游戏类、视频播放类）、长列表展示场景（如商品列表、新闻资讯）</td>
-</tr>
-<tr>
-<td><strong>TS-Skyline - 基础模板</strong></td>
-<td>融合 TypeScript 的代码质量保障与 Skyline 的高性能渲染，减少卡顿和内存占用</td>
-<td>大型高性能小程序项目（如大型企业级应用、功能复杂的社交类）</td>
-</tr>
-<tr>
-<td><strong>TS+Sass - 基础模板</strong></td>
-<td>结合 TypeScript 的静态类型检查与 Sass 的强大样式功能，语法严谨，适合大型项目</td>
-<td>大型企业级小程序（如大型电商、企业资源管理）、需要复杂样式设计的小程序（如设计类、时尚类）</td>
-</tr>
-<tr>
-<td><strong>TS+Less - 基础模板</strong></td>
-<td>基于 TypeScript，采用 Less 预处理器，语法简洁灵活，允许使用 JavaScript 语法</td>
-<td>中等规模项目（如小型电商、生活服务类）、对样式要求不复杂但需提高编写效率的项目</td>
+<td style="text-align:center"><code>&lt;image&gt;</code></td>
+<td style="text-align:center">装载图片</td>
+<td style="text-align:center"><code>&lt;img&gt;</code></td>
 </tr>
 </tbody>
 </table>
-<p>使用<strong>TS-基础模板</strong>创建的小程序项目结构如下图所示：<br />
-<img src="20250728141458327.png" srcset="/img/loading.gif" lazyload alt="" /></p>
-<h1 id="三-常用文件及项目结构"><a class="markdownIt-Anchor" href="#三-常用文件及项目结构"></a> 三、常用文件及项目结构</h1>
-<h2 id="1常用文件类型"><a class="markdownIt-Anchor" href="#1常用文件类型"></a> 1.常用文件类型</h2>
-<p>小程序代码中的文件类型大致分为以下四种：</p>
-<ul>
-<li><code>.wxml</code>：微信模板文件，类似网页开发的html文件。</li>
-<li><code>.wxss</code>：微信样式表文件，用于定于页面样式。</li>
-<li><code>.js</code>：脚本文件，代码逻辑写在这。</li>
-<li><code>.json</code>：静态数据配置文件。</li>
-</ul>
-<h2 id="2项目中的重要文件"><a class="markdownIt-Anchor" href="#2项目中的重要文件"></a> 2.项目中的重要文件</h2>
-<p>创建项目后，有一些重要的文件需要充分认识：</p>
-<h3 id="appjson小程序全局配置文件"><a class="markdownIt-Anchor" href="#appjson小程序全局配置文件"></a> app.json：小程序全局配置文件</h3>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-punctuation">&#123;</span><br>  <span class="hljs-attr">&quot;pages&quot;</span><span class="hljs-punctuation">:</span><span class="hljs-punctuation">[</span> <span class="hljs-comment">//页面数组</span><br>    <span class="hljs-string">&quot;pages/index/index&quot;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-string">&quot;pages/logs/logs&quot;</span><br>  <span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span><br>  <span class="hljs-attr">&quot;window&quot;</span><span class="hljs-punctuation">:</span><span class="hljs-punctuation">&#123;</span><br>    <span class="hljs-attr">&quot;backgroundTextStyle&quot;</span><span class="hljs-punctuation">:</span><span class="hljs-string">&quot;light&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-comment">//背景文本样式 可选light dark</span><br>    <span class="hljs-attr">&quot;navigationBarBackgroundColor&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;#fff&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-comment">//导航背景色，可定义任意颜色</span><br>    <span class="hljs-attr">&quot;navigationBarTitleText&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;WeChat&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-comment">//导航标题，可定义任意文本</span><br>    <span class="hljs-attr">&quot;navigationBarTextStyle&quot;</span><span class="hljs-punctuation">:</span><span class="hljs-string">&quot;black&quot;</span> <span class="hljs-comment">//导航文本颜色，可选black white</span><br>  <span class="hljs-punctuation">&#125;</span><br><span class="hljs-punctuation">&#125;</span><br></code></pre></td></tr></table></figure>
-<p>此文件主要管理小程序的全局配置，如：</p>
-<ul>
-<li>小程序页面路径</li>
-<li>界面表现(标题，背景色，字体色)</li>
-<li>网络超时时间</li>
-<li>底部tab</li>
-</ul>
-<p>其中，<strong>pages字段</strong>记录了小程序的所有页面路径（类似于vue中的路由表？）,添加或删除页面文件后需要在此处同步修改，以免小程序找不到页面；<strong>windows字段</strong>用于定于所有页面的顶部背景颜色，文字颜色，标题等，作为全局配置应用于所有页面。当然也可以在单个页面json配置中定义独特的风格覆盖全局配置。<br />
-<img src="20250728133628228.png" srcset="/img/loading.gif" lazyload alt="" /></p>
-<h3 id="projectconfigjson开发者工具配置"><a class="markdownIt-Anchor" href="#projectconfigjson开发者工具配置"></a> project.config.json：开发者工具配置</h3>
-<p>用于定义开发者工具的个性化定制，如界面颜色，编译配置等等，类似于<code>npm</code>下的<code>package.json</code>，记录了项目使用的一些node包，在代码同步时无需同步这些包，只需要执行<code>npm install</code>即可根据<code>package.json</code>文件中的包信息临时下载安装。</p>
-<h3 id="wxml文件"><a class="markdownIt-Anchor" href="#wxml文件"></a> wxml文件</h3>
-<p>对应于web中的<code>html</code>文件，将类似于<code>div</code>、<code>p</code>、<code>span</code>这样的标签换成了<code>view</code>、<code>text</code>等标签。此外，wxml还新增了例如<code>wx:if</code>类似的属性（跟vue挺像的）。同时，微信小程序也推行了MVVM做法，我们只用关心数据层，当数据发生变化，通过数据绑定的做法，模板中的表达式以及<code>wx：</code>等属性自动实现视图变化。</p>
-<h3 id="wxss样式"><a class="markdownIt-Anchor" href="#wxss样式"></a> wxss样式</h3>
-<p>小程序中的样式表写法与网页开发类似，可以看到全局配置中和每个页面文件夹下都存在一个wxss文件，这点与json配置一样。我们可以在app.wxss中定义全局样式，而在页面下的wxss样式中定义此页面独有的页面。</p>
-<h1 id="四-小程序开发与web开发的不同点"><a class="markdownIt-Anchor" href="#四-小程序开发与web开发的不同点"></a> 四、小程序开发与web开发的不同点</h1>
-<ul>
-<li>浏览器渲染层与逻辑层都由同一线程处理，所以会存在堵塞的情况；但微信小程序由不同线程处理，逻辑层在jscore中。<br />
-<img src="20250728134705499.png" srcset="/img/loading.gif" lazyload alt="" /></li>
-<li>web开发中能方便操作DOM、BOM，但微信小程序中没有完整的浏览器对象，所以无法操作DOM，类似JQuery的框架也无法正常运行。</li>
-<li>web开发中常用mpn引入三方库，但jscore环境与node.js不太相同，因此在网页开发中npm的包一部分在微信小程序中可能也无法使用。</li>
-</ul>
-<h1 id="五-快捷添加页面"><a class="markdownIt-Anchor" href="#五-快捷添加页面"></a> 五、快捷添加页面</h1>
-<p>前文提到，添加页面文件后需要在<code>pages.json</code>中同步修改，一般推荐添加页面时直接在<code>pages</code>数组中添加一个页面路径，保存后编辑器会自动生成一个页面。<br />
-<img src="20250728135211032.gif" srcset="/img/loading.gif" lazyload alt="" /></p>
-<h1 id="六-json文件的编写规则"><a class="markdownIt-Anchor" href="#六-json文件的编写规则"></a> 六、json文件的编写规则</h1>
-<p>1.json文件都是被包裹在{}中，并以key-value方式展示。注意key一定要加上双引号，没加双引号或者加单引号都会报错。</p>
-<p>2.其次，json的值只能以下几种：</p>
-<ul>
-<li>数字</li>
-<li>字符串(需要加双引号)</li>
-<li>布尔值</li>
-<li>数组(放在[]中)</li>
-<li>对象(放在{}中)</li>
-<li>null</li>
-</ul>
-<p>不支持undefined以及其它数据结构，否则会报错。</p>
-<p>3.json文件不支持注释，添加任意注释都会引发报错。</p>
+<p>值得高兴的是，官方为这些组件提供了很多便捷的属性，如：</p>
+<p>假设我们希望图片加载完成后获取图片的宽度，这里就可以利用<code>image</code>的<code>bindload</code>（图片加载完成后触发）属性：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">image</span> <span class="hljs-attr">bindload</span>=<span class="hljs-string">&#x27;imgLoad&#x27;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&#x27;···&#x27;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">image</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">const</span> app = <span class="hljs-title function_">getApp</span>()<br><br><span class="hljs-title class_">Page</span>(&#123;<br>  <span class="hljs-comment">//图片加载完成后执行的方法</span><br>  <span class="hljs-title function_">imgLoad</span>(<span class="hljs-params">image</span>) &#123;<br>    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(image.<span class="hljs-property">detail</span>.<span class="hljs-property">width</span>);<br>  &#125;<br>&#125;)<br></code></pre></td></tr></table></figure>
+<p>可以看到，图片加载完毕后，控制台输出了图片的宽度。此操作也可用于实现图片的懒加载等逻辑。</p>
+<p>微信官方文档中的各种组件介绍： <a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/component/">https://developers.weixin.qq.com/miniprogram/dev/component/</a><br />
+也有一些优秀的开源组件库，如 <strong>Vant Weapp</strong>： <a target="_blank" rel="noopener" href="https://vant-ui.github.io/vant-weapp/#/home">https://vant-ui.github.io/vant-weapp/#/home</a></p>
+<h1 id="二-wxss篇"><a class="markdownIt-Anchor" href="#二-wxss篇"></a> 二、WXSS篇</h1>
+<p>WXSS基本上兼容CSS的写法，选择器定义、属性以及对应的取值没有很大的变化，若有CSS基础可以快速上手。需要注意的是，手机上几乎不会出现“鼠标悬浮”的操作，因此在WXSS中无法使用<code>:hover</code>伪类选择器。</p>
+<h2 id="1新单位rpx"><a class="markdownIt-Anchor" href="#1新单位rpx"></a> 1.新单位rpx</h2>
+<p>微信小程序新增了一个单位<code>rpx</code>，定义如下：</p>
+<blockquote>
+<p>rpx（responsive pixel，响应式像素）: 可以根据屏幕宽度进行自适应。规定屏幕宽为750rpx。如在 iPhone6 上，屏幕宽度为375px，共有750个物理像素，则750rpx = 375px = 750物理像素，1rpx = 0.5px = 1物理像素。</p>
+</blockquote>
+<p>官方推荐开发微信小程序时用 <strong>iPhone6</strong> 作为视觉稿的标准，在这样尺寸的屏幕上1rpx = 2px，是比较好算的整数倍关系。</p>
+<h2 id="2wxss的样式关联"><a class="markdownIt-Anchor" href="#2wxss的样式关联"></a> 2.WXSS的样式关联</h2>
+<p>在小程序中，同一个文件夹中的wxss文件中的样式会自动关联到wxml中，而根目录下<code>app.wxss</code>定义的是全局样式，会应用到所有的WXML文件上。</p>
+<p>如果想让WXML链接其他文件夹下的wxss样式，需要在此WXML同文件夹的WXSS文件中使用<code>@import</code>导入外联样式，如：</p>
+<p>pages文件夹下有index.wxml和index.wxss，需要链接styles文件夹下的default.wxss文件，此时需要在index.wxss中加上：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-keyword">@import</span> <span class="hljs-string">&quot;../styles/default.wxss&quot;</span><br></code></pre></td></tr></table></figure>
+<p>此时，default.wxss中的样式就会应用到index.wxml上了。</p>
 <hr />
 <h1 id="参考资料"><a class="markdownIt-Anchor" href="#参考资料"></a> 参考资料</h1>
-<section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span>热爱技术的小郑.超详细微信小程序开发学习笔记，看完你也可以动手做微信小程序项目[EB/OL].(2024-08-20)[2025-07-28]. <a target="_blank" rel="noopener" href="https://developer.aliyun.com/article/1590890">https://developer.aliyun.com/article/1590890</a>
-<a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span>微信开放社区.开发 · 小程序开发从入门到进阶[EB/OL].(2021-08-24)[2025-07-28]. <a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/community/business">https://developers.weixin.qq.com/community/business</a>
-<a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:3" class="footnote-text"><span>听风是风.从零开始的微信小程序入门教程(一)[EB/OL].(2019-06-29)[2025-07-28]. <a target="_blank" rel="noopener" href="https://www.cnblogs.com/echolun/p/11094605.html">https://www.cnblogs.com/echolun/p/11094605.html</a>
-<a href="#fnref:3" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
+<section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span>听风是风.从零开始的微信小程序入门教程(二)[EB/OL].(2020-04-16)[2025-07-29]. <a target="_blank" rel="noopener" href="https://www.cnblogs.com/echolun/p/12709761.html">https://www.cnblogs.com/echolun/p/12709761.html</a>
+<a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
                 
               </div>
             
@@ -457,8 +407,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>微信小程序开发（一）：工具与起步</div>
-      <div>http://blog.morely.top/2025/07/29/微信小程序开发（一）：工具与起步/</div>
+      <div>微信小程序开发（二）：WXML与WXSS简介</div>
+      <div>http://blog.morely.top/2025/07/30/微信小程序开发（二）：WXML与WXSS简介/</div>
     </div>
     <div class="license-meta">
       
@@ -470,7 +420,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年7月29日</div>
+          <div>2025年7月30日</div>
         </div>
       
       
@@ -502,18 +452,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/07/30/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%EF%BC%88%E4%BA%8C%EF%BC%89%EF%BC%9AWXML%E4%B8%8EWXSS%E7%AE%80%E4%BB%8B/" title="微信小程序开发（二）：WXML与WXSS简介">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">微信小程序开发（二）：WXML与WXSS简介</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/07/08/Web%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E5%9B%9B%EF%BC%89%EF%BC%9AjQuery%E7%AF%87/" title="Web学习笔记（四）：jQuery篇">
-                        <span class="hidden-mobile">Web学习笔记（四）：jQuery篇</span>
+                      <a href="/2025/07/29/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9A%E5%B7%A5%E5%85%B7%E4%B8%8E%E8%B5%B7%E6%AD%A5/" title="微信小程序开发（一）：工具与起步">
+                        <span class="hidden-mobile">微信小程序开发（一）：工具与起步</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

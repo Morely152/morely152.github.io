@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.morely.top/2025/07/30/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%EF%BC%88%E4%BA%8C%EF%BC%89%EF%BC%9AWXML%E4%B8%8EWXSS%E7%AE%80%E4%BB%8B/</loc>
+    
+    <lastmod>2025-07-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://blog.morely.top/2025/07/29/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9A%E5%B7%A5%E5%85%B7%E4%B8%8E%E8%B5%B7%E6%AD%A5/</loc>
     
     <lastmod>2025-07-29</lastmod>
@@ -139,7 +148,7 @@
 
   <url>
     <loc>http://blog.morely.top/</loc>
-    <lastmod>2025-07-29</lastmod>
+    <lastmod>2025-07-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -147,105 +156,105 @@
   
   <url>
     <loc>http://blog.morely.top/tags/AI/</loc>
-    <lastmod>2025-07-29</lastmod>
+    <lastmod>2025-07-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://blog.morely.top/tags/C/</loc>
-    <lastmod>2025-07-29</lastmod>
+    <lastmod>2025-07-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://blog.morely.top/tags/Visual-Studio/</loc>
-    <lastmod>2025-07-29</lastmod>
+    <lastmod>2025-07-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://blog.morely.top/tags/WPF/</loc>
-    <lastmod>2025-07-29</lastmod>
+    <lastmod>2025-07-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://blog.morely.top/tags/OBS-Studio/</loc>
-    <lastmod>2025-07-29</lastmod>
+    <lastmod>2025-07-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://blog.morely.top/tags/Web/</loc>
-    <lastmod>2025-07-29</lastmod>
+    <lastmod>2025-07-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://blog.morely.top/tags/HTML/</loc>
-    <lastmod>2025-07-29</lastmod>
+    <lastmod>2025-07-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://blog.morely.top/tags/JavaScript/</loc>
-    <lastmod>2025-07-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.morely.top/tags/jQuery/</loc>
-    <lastmod>2025-07-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.morely.top/tags/CSS/</loc>
-    <lastmod>2025-07-29</lastmod>
+    <lastmod>2025-07-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://blog.morely.top/tags/CSDN/</loc>
-    <lastmod>2025-07-29</lastmod>
+    <lastmod>2025-07-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.morely.top/tags/jQuery/</loc>
+    <lastmod>2025-07-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.morely.top/tags/CSS/</loc>
+    <lastmod>2025-07-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://blog.morely.top/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/</loc>
-    <lastmod>2025-07-29</lastmod>
+    <lastmod>2025-07-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://blog.morely.top/tags/Git/</loc>
-    <lastmod>2025-07-29</lastmod>
+    <lastmod>2025-07-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://blog.morely.top/tags/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
-    <lastmod>2025-07-29</lastmod>
+    <lastmod>2025-07-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://blog.morely.top/tags/C/</loc>
-    <lastmod>2025-07-29</lastmod>
+    <lastmod>2025-07-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -254,91 +263,91 @@
   
   <url>
     <loc>http://blog.morely.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2025-07-29</lastmod>
+    <lastmod>2025-07-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://blog.morely.top/categories/%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/</loc>
-    <lastmod>2025-07-29</lastmod>
+    <lastmod>2025-07-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://blog.morely.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Web/</loc>
-    <lastmod>2025-07-29</lastmod>
+    <lastmod>2025-07-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://blog.morely.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/C/</loc>
-    <lastmod>2025-07-29</lastmod>
+    <lastmod>2025-07-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://blog.morely.top/categories/%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/WPF/</loc>
-    <lastmod>2025-07-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.morely.top/categories/%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/OBS-Studio/</loc>
-    <lastmod>2025-07-29</lastmod>
+    <lastmod>2025-07-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://blog.morely.top/categories/%E7%A2%8E%E7%A2%8E%E5%BF%B5/</loc>
-    <lastmod>2025-07-29</lastmod>
+    <lastmod>2025-07-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.morely.top/categories/%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/OBS-Studio/</loc>
+    <lastmod>2025-07-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://blog.morely.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/</loc>
-    <lastmod>2025-07-29</lastmod>
+    <lastmod>2025-07-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://blog.morely.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Web/HTML/</loc>
-    <lastmod>2025-07-29</lastmod>
+    <lastmod>2025-07-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://blog.morely.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Web/JavaScript/</loc>
-    <lastmod>2025-07-29</lastmod>
+    <lastmod>2025-07-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://blog.morely.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Web/CSS/</loc>
-    <lastmod>2025-07-29</lastmod>
+    <lastmod>2025-07-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://blog.morely.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Git/</loc>
-    <lastmod>2025-07-29</lastmod>
+    <lastmod>2025-07-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://blog.morely.top/categories/%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2025-07-29</lastmod>
+    <lastmod>2025-07-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
