@@ -1,0 +1,800 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/images/Logo_dark.ico">
+  <link rel="icon" href="/images/Logo_dark.ico">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="陌离">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="本篇笔记部分内容整理自网络中的一些文章及视频，详见文末的“参考资料”部分。存在部分AI生成的内容，请仔细甄别可能存在的错误。    一、函数  1.介绍  函数是JavaScript应用程序的基础。它帮助你实现抽象层，模拟类，信息隐藏和模块。在TypeScript里，虽然已经支持类，命名空间和模块，但函数仍然是主要的定义行为的地方。TypeScript为JavaScript函数添加了额外的功能">
+<meta property="og:type" content="article">
+<meta property="og:title" content="微信小程序开发（五）：TypeScript函数、泛型与接口">
+<meta property="og:url" content="http://blog.morely.top/2025/08/15/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%EF%BC%88%E4%BA%94%EF%BC%89%EF%BC%9ATypeScript%E5%87%BD%E6%95%B0%E3%80%81%E6%B3%9B%E5%9E%8B%E4%B8%8E%E6%8E%A5%E5%8F%A3/index.html">
+<meta property="og:site_name" content="陌离的个人博客">
+<meta property="og:description" content="本篇笔记部分内容整理自网络中的一些文章及视频，详见文末的“参考资料”部分。存在部分AI生成的内容，请仔细甄别可能存在的错误。    一、函数  1.介绍  函数是JavaScript应用程序的基础。它帮助你实现抽象层，模拟类，信息隐藏和模块。在TypeScript里，虽然已经支持类，命名空间和模块，但函数仍然是主要的定义行为的地方。TypeScript为JavaScript函数添加了额外的功能">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-08-15T15:50:59.000Z">
+<meta property="article:modified_time" content="2025-08-15T15:51:26.053Z">
+<meta property="article:author" content="陌离">
+<meta property="article:tag" content="微信小程序开发">
+<meta property="article:tag" content="TypeScript">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>微信小程序开发（五）：TypeScript函数、泛型与接口 - 陌离的个人博客</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"blog.morely.top","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>陌离的个人博客</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/images/Background.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="微信小程序开发（五）：TypeScript函数、泛型与接口"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-08-15 23:50" pubdate>
+          2025年8月15日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.9k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          16 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">微信小程序开发（五）：TypeScript函数、泛型与接口</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <hr />
+<blockquote>
+<p>本篇笔记部分内容整理自网络中的一些文章及视频，详见文末的“参考资料”部分。存在部分AI生成的内容，请仔细甄别可能存在的错误。</p>
+</blockquote>
+<hr />
+<h1 id="一-函数"><a class="markdownIt-Anchor" href="#一-函数"></a> 一、函数</h1>
+<h2 id="1介绍"><a class="markdownIt-Anchor" href="#1介绍"></a> 1.介绍</h2>
+<blockquote>
+<p>函数是JavaScript应用程序的基础。它帮助你实现抽象层，模拟类，信息隐藏和模块。在TypeScript里，虽然已经支持类，命名空间和模块，但函数仍然是主要的定义<strong>行为</strong>的地方。TypeScript为JavaScript函数添加了额外的功能，让我们可以更容易地使用。</p>
+</blockquote>
+<h2 id="2函数声明"><a class="markdownIt-Anchor" href="#2函数声明"></a> 2.函数声明</h2>
+<p>和JavaScript一样，TypeScript函数可以创建有名字的函数和匿名函数。你可以随意选择适合应用程序的方式，不论是定义一系列API函数还是只使用一次的函数。</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs ts"><span class="hljs-comment">// 有名函数（相对匿名而言，不是说这个函数有多出名…）</span><br><span class="hljs-keyword">function</span> <span class="hljs-title function_">add</span>(<span class="hljs-params">x, y</span>) &#123;<br>    <span class="hljs-keyword">return</span> x + y;<br>&#125;<br><br><span class="hljs-comment">// 匿名函数</span><br><span class="hljs-keyword">let</span> myAdd = <span class="hljs-keyword">function</span>(<span class="hljs-params">x, y</span>) &#123; <span class="hljs-keyword">return</span> x + y; &#125;;<br></code></pre></td></tr></table></figure>
+<p>在JavaScript里，函数可以使用函数体外部的变量。当函数这么做时，我们说它‘捕获’了这些变量。</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs ts"><span class="hljs-keyword">let</span> z = <span class="hljs-number">100</span>;<br><br><span class="hljs-keyword">function</span> <span class="hljs-title function_">addToZ</span>(<span class="hljs-params">x, y</span>) &#123;<br>	<span class="hljs-keyword">return</span> x + y + z;<br>&#125;<br></code></pre></td></tr></table></figure>
+<h2 id="3函数类型"><a class="markdownIt-Anchor" href="#3函数类型"></a> 3.函数类型</h2>
+<p>函数的类型，通常指返回值的数据类型；当我们指定函数类型后，return的数据类型将自动成为函数的类型。需要注意的是，即使函数没有返回值，也要写明函数类型为void，不可以忽略。</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs ts"><span class="hljs-keyword">function</span> <span class="hljs-title function_">add</span>(<span class="hljs-params"><span class="hljs-attr">x</span>: <span class="hljs-built_in">number</span>, <span class="hljs-attr">y</span>: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">number</span> &#123;<br>    <span class="hljs-keyword">return</span> x + y;<br>&#125;<br><br><span class="hljs-keyword">let</span> myAdd = <span class="hljs-keyword">function</span>(<span class="hljs-params"><span class="hljs-attr">x</span>: <span class="hljs-built_in">number</span>, <span class="hljs-attr">y</span>: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">number</span> &#123; <span class="hljs-keyword">return</span> x + y; &#125;;<br><br><span class="hljs-comment">// 还可以这样写：</span><br><span class="hljs-keyword">let</span> <span class="hljs-attr">myAdd</span>: <span class="hljs-function">(<span class="hljs-params"><span class="hljs-attr">x</span>:<span class="hljs-built_in">number</span>, <span class="hljs-attr">y</span>:<span class="hljs-built_in">number</span></span>) =&gt;</span> <span class="hljs-built_in">number</span> =<br>    <span class="hljs-keyword">function</span>(<span class="hljs-params"><span class="hljs-attr">x</span>: <span class="hljs-built_in">number</span>, <span class="hljs-attr">y</span>: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">number</span> &#123; <span class="hljs-keyword">return</span> x + y; &#125;;<br></code></pre></td></tr></table></figure>
+<h2 id="4类型推断"><a class="markdownIt-Anchor" href="#4类型推断"></a> 4.类型推断</h2>
+<p>就算仅在等式的一侧带有类型，TypeScript编译器仍可正确识别类型；这种“按上下文归类”，是类型推论的一种。它帮助我们更好地为程序指定类型。</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs ts"><span class="hljs-comment">// 这个myAdd函数拥有完整的函数类型</span><br><span class="hljs-keyword">let</span> myAdd = <span class="hljs-keyword">function</span>(<span class="hljs-params"><span class="hljs-attr">x</span>: <span class="hljs-built_in">number</span>, <span class="hljs-attr">y</span>: <span class="hljs-built_in">number</span></span>): <span class="hljs-built_in">number</span> &#123; <span class="hljs-keyword">return</span> x + y; &#125;;<br><br><span class="hljs-comment">// 这里的x和y同样会推断出是number型</span><br><span class="hljs-keyword">let</span> <span class="hljs-attr">myAdd</span>: <span class="hljs-function">(<span class="hljs-params"><span class="hljs-attr">baseValue</span>: <span class="hljs-built_in">number</span>, <span class="hljs-attr">increment</span>: <span class="hljs-built_in">number</span></span>) =&gt;</span> <span class="hljs-built_in">number</span> =<br>    <span class="hljs-keyword">function</span>(<span class="hljs-params">x, y</span>) &#123; <span class="hljs-keyword">return</span> x + y; &#125;;<br></code></pre></td></tr></table></figure>
+<h2 id="5可选参数和默认参数"><a class="markdownIt-Anchor" href="#5可选参数和默认参数"></a> 5.可选参数和默认参数</h2>
+<p>TypeScript里的每个函数参数都是必须的。可以将<code>null</code>或<code>undefined</code>作为参数，但是编译器会检查我们是否为每个参数都传入了值。即实参与形参必须一一对应。在TypeScript里我们可以在参数名旁使用<code>?</code>实现可选参数的功能（有点像C#？）。可选参数必须跟在必须参数后面。即如果想让last name是可选的，那么应当把last name放在后面。</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs ts"><span class="hljs-keyword">function</span> <span class="hljs-title function_">buildName</span>(<span class="hljs-params"><span class="hljs-attr">firstName</span>: <span class="hljs-built_in">string</span>, <span class="hljs-attr">lastName</span>?: <span class="hljs-built_in">string</span></span>) &#123;<br>    <span class="hljs-keyword">if</span> (lastName)<br>        <span class="hljs-keyword">return</span> firstName + <span class="hljs-string">&quot; &quot;</span> + lastName;<br>    <span class="hljs-keyword">else</span><br>        <span class="hljs-keyword">return</span> firstName;<br>&#125;<br><br><span class="hljs-keyword">let</span> result1 = <span class="hljs-title function_">buildName</span>(<span class="hljs-string">&quot;Bob&quot;</span>);                    <span class="hljs-comment">// √，可以省略后一个参数</span><br><span class="hljs-keyword">let</span> result2 = <span class="hljs-title function_">buildName</span>(<span class="hljs-string">&quot;Bob&quot;</span>, <span class="hljs-string">&quot;Adams&quot;</span>, <span class="hljs-string">&quot;Sr.&quot;</span>);    <span class="hljs-comment">// ×，参数太多了</span><br><span class="hljs-keyword">let</span> result3 = <span class="hljs-title function_">buildName</span>(<span class="hljs-string">&quot;Bob&quot;</span>, <span class="hljs-string">&quot;Adams&quot;</span>);           <span class="hljs-comment">// √，正好</span><br></code></pre></td></tr></table></figure>
+<p>在TypeScript里，当用户没有传递这个参数或传递的值是<code>undefined</code>时，我们也可以为参数提供一个默认值。它们叫做有默认初始化值的参数。</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs ts"><span class="hljs-keyword">function</span> <span class="hljs-title function_">buildName</span>(<span class="hljs-params"><span class="hljs-attr">firstName</span>: <span class="hljs-built_in">string</span>, lastName = <span class="hljs-string">&quot;Smith&quot;</span></span>) &#123;<br>    <span class="hljs-keyword">return</span> firstName + <span class="hljs-string">&quot; &quot;</span> + lastName;<br>&#125;<br><br><span class="hljs-keyword">let</span> result1 = <span class="hljs-title function_">buildName</span>(<span class="hljs-string">&quot;Bob&quot;</span>);                  <span class="hljs-comment">// √</span><br><span class="hljs-keyword">let</span> result2 = <span class="hljs-title function_">buildName</span>(<span class="hljs-string">&quot;Bob&quot;</span>, <span class="hljs-literal">undefined</span>);       <span class="hljs-comment">// √</span><br><span class="hljs-keyword">let</span> result3 = <span class="hljs-title function_">buildName</span>(<span class="hljs-string">&quot;Bob&quot;</span>, <span class="hljs-string">&quot;Adams&quot;</span>, <span class="hljs-string">&quot;Sr.&quot;</span>);  <span class="hljs-comment">// ×，参数太多了</span><br><span class="hljs-keyword">let</span> result4 = <span class="hljs-title function_">buildName</span>(<span class="hljs-string">&quot;Bob&quot;</span>, <span class="hljs-string">&quot;Adams&quot;</span>);         <span class="hljs-comment">// √，也可以不用默认值</span><br></code></pre></td></tr></table></figure>
+<h2 id="6剩余参数不定量参数"><a class="markdownIt-Anchor" href="#6剩余参数不定量参数"></a> 6.剩余参数（不定量参数）</h2>
+<p>有时难以确定参数的个数，可以使用<code>···</code>接收一系列个数不确定的参数，存储在数组中。</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs ts"><span class="hljs-keyword">function</span> <span class="hljs-title function_">buildName</span>(<span class="hljs-params"><span class="hljs-attr">firstName</span>: <span class="hljs-built_in">string</span>, ...<span class="hljs-attr">restOfName</span>: <span class="hljs-built_in">string</span>[]</span>) &#123;<br>  <span class="hljs-keyword">return</span> firstName + <span class="hljs-string">&quot; &quot;</span> + restOfName.<span class="hljs-title function_">join</span>(<span class="hljs-string">&quot; &quot;</span>);<br>  <span class="hljs-comment">// 这里join方法用于将数组的各个元素使用空格串起来，即”Samuel Lucas Mackinzie“</span><br>&#125;<br><br><span class="hljs-keyword">let</span> employeeName = <span class="hljs-title function_">buildName</span>(<span class="hljs-string">&quot;Joseph&quot;</span>, <span class="hljs-string">&quot;Samuel&quot;</span>, <span class="hljs-string">&quot;Lucas&quot;</span>, <span class="hljs-string">&quot;MacKinzie&quot;</span>);<br></code></pre></td></tr></table></figure>
+<h2 id="7-函数重载"><a class="markdownIt-Anchor" href="#7-函数重载"></a> 7. 函数重载</h2>
+<p>JavaScript本身是个动态语言。JavaScript支持同名函数根据传入不同的参数而返回不同类型的数据，即支持函数重载。</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs ts"><span class="hljs-keyword">function</span> <span class="hljs-title function_">add_things</span>(<span class="hljs-params"><span class="hljs-attr">par_1</span>:<span class="hljs-built_in">number</span>, <span class="hljs-attr">par_2</span>:<span class="hljs-built_in">number</span></span>):<span class="hljs-built_in">number</span> &#123;<br>	<span class="hljs-keyword">return</span> a + b;<br>&#125;<br></code></pre></td></tr></table></figure>
+<h1 id="二-泛型"><a class="markdownIt-Anchor" href="#二-泛型"></a> 二、泛型</h1>
+<h2 id="1泛型广泛的类型"><a class="markdownIt-Anchor" href="#1泛型广泛的类型"></a> 1.泛型：广泛的类型</h2>
+<p>在编写程序时，单个函数声明的返回值通常是固定的，这样对一些比较灵活的需求造成了困扰，例如我们需要根据参数的类型灵活地返回各种类型的数据。</p>
+<p>C#、Java等语言支持使用<code>泛型</code>来创建可重用的组件，一个组件可以支持多种类型的数据。这样用户就可以以自己的数据类型来使用组件。</p>
+<h2 id="2泛型函数"><a class="markdownIt-Anchor" href="#2泛型函数"></a> 2.泛型函数</h2>
+<p>有一个方法<code>identity</code>，负责返回输入的内容（类似于<code>echo</code>）：</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs ts"><span class="hljs-keyword">function</span> <span class="hljs-title function_">identity</span>(<span class="hljs-params"><span class="hljs-attr">arg</span>: <span class="hljs-built_in">any</span></span>): <span class="hljs-built_in">any</span> &#123;<br>    <span class="hljs-keyword">return</span> arg;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>这样做存在问题，返回值会一直是<code>any</code>类型，即丢失了参数的数据类型信息。因此，我们需要一种方法使返回值的类型与传入参数的类型是相同的。这里就需要使用<strong>类型变量</strong>，它是一种特殊的变量，只用于表示类型而不是值。</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs ts"><span class="hljs-keyword">function</span> identity&lt;T&gt;(<span class="hljs-attr">arg</span>: T): T &#123;<br>	<span class="hljs-keyword">return</span> arg; <br>&#125;<br></code></pre></td></tr></table></figure>
+<p>我们给identity添加了类型变量<code>T</code>。<code>T</code>帮助我们捕获用户传入的类型（比如：<code>number</code>），之后我们就可以使用这个类型。之后我们再次使用了<code>T</code>当做返回值类型。现在我们可以知道参数类型与返回值类型是相同的了。这允许我们跟踪函数里使用的类型的信息。</p>
+<p>我们把这个版本的<code>identity</code>函数叫做<strong>泛型</strong>，因为它可以适用于多个类型。不同于使用<code>any</code>，它不会丢失信息，像第一个例子那像保持准确性，传入数值类型并返回数值类型。</p>
+<p>泛型函数的使用：</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs ts"><span class="hljs-comment">// 第一种：明确指定T是某种类型</span><br><span class="hljs-keyword">let</span> output = identity&lt;<span class="hljs-built_in">string</span>&gt;(<span class="hljs-string">&quot;myString&quot;</span>);<br><br><span class="hljs-comment">// 第二种：类型推论,让编译器自动根据参数确定T的类型</span><br><span class="hljs-keyword">let</span> output = <span class="hljs-title function_">identity</span>(<span class="hljs-string">&quot;myString&quot;</span>);<br><br><span class="hljs-comment">// 这两种方法都可以返回字符串类型的&quot;myString&quot;</span><br></code></pre></td></tr></table></figure>
+<p>值得注意的是，在泛型函数中，只能使用一些通用的属性，即应当在函数体中将它们当作任意类型处理。如：</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs ts"><span class="hljs-keyword">function</span> identity&lt;T&gt;(<span class="hljs-attr">arg</span>: T): T &#123;<br>    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(arg.<span class="hljs-property">length</span>);<br>    <span class="hljs-keyword">return</span> arg;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>这里试图打印参数的长度，但是某些类型的参数没有<code>lengh</code>属性（如数字）。</p>
+<h1 id="三-接口"><a class="markdownIt-Anchor" href="#三-接口"></a> 三、接口</h1>
+<p>TypeScript 的核心原则之一是对值所具有的<strong>结构</strong>进行类型检查。 它有时被称做“鸭式辨型法”或“结构性子类型化”。TypeScript接口的作用就是为这些类型命名，以及我们写的代码或第三方代码定义契约。</p>
+<p>通过一个简单示例，来观察接口是如何工作的：</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs ts"><span class="hljs-keyword">function</span> <span class="hljs-title function_">printLabel</span>(<span class="hljs-params"><span class="hljs-attr">labeledObj</span>: &#123; label: <span class="hljs-built_in">string</span> &#125;</span>) &#123;<br>  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(labeledObj.<span class="hljs-property">label</span>);<br>&#125;<br><br><span class="hljs-keyword">let</span> myObj = &#123; <span class="hljs-attr">size</span>: <span class="hljs-number">10</span>, <span class="hljs-attr">label</span>: <span class="hljs-string">&quot;Size 10 Object&quot;</span> &#125;;<br><span class="hljs-title function_">printLabel</span>(myObj);<br></code></pre></td></tr></table></figure>
+<p>调用<code>printLabel</code>方法时，类型检查器会检查其参数的类型；即要求此对象参数包含<strong>名为label且类型为string</strong>的属性。要想保证参数必须包含一个<code>label</code>属性且类型为<code>string</code>，可以使用<strong>接口（interface）</strong></p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs ts"><span class="hljs-keyword">interface</span> <span class="hljs-title class_">LabeledValue</span> &#123;<br>  <span class="hljs-attr">label</span>: <span class="hljs-built_in">string</span>;<br>&#125;<br><br><span class="hljs-keyword">function</span> <span class="hljs-title function_">printLabel</span>(<span class="hljs-params"><span class="hljs-attr">labeledObj</span>: <span class="hljs-title class_">LabeledValue</span></span>) &#123;<br>  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(labeledObj.<span class="hljs-property">label</span>);<br>&#125;<br><br><span class="hljs-keyword">let</span> myObj = &#123; <span class="hljs-attr">size</span>: <span class="hljs-number">10</span>, <span class="hljs-attr">label</span>: <span class="hljs-string">&quot;Size 10 Object&quot;</span> &#125;;<br><span class="hljs-title function_">printLabel</span>(myObj);<br></code></pre></td></tr></table></figure>
+<p><code>LabeledValue</code>接口就好比一个名字，用来描述上面例子里的要求。 它代表了有一个<code>label</code>属性且类型为<code>string</code>的对象。</p>
+<hr />
+<h1 id="参考资料"><a class="markdownIt-Anchor" href="#参考资料"></a> 参考资料</h1>
+<section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span>TSDoc.TS手册指南v1-函数[EB/OL].(2023-04-28)[2025-08-05]. <a target="_blank" rel="noopener" href="https://fxzer.github.io/tsdoc-vitepress/zh/handbooks/handbook-v1/Functions">https://fxzer.github.io/tsdoc-vitepress/zh/handbooks/handbook-v1/Functions</a>
+<a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span>TSDoc.TS手册指南v1-泛型[EB/OL].(2023-04-28)[2025-08-05]. <a target="_blank" rel="noopener" href="https://fxzer.github.io/tsdoc-vitepress/zh/handbooks/handbook-v1/Generics">https://fxzer.github.io/tsdoc-vitepress/zh/handbooks/handbook-v1/Generics</a>
+<a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:3" class="footnote-text"><span>TSDoc.TS手册指南v1-接口[EB/OL].(2023-04-28)[2025-08-05]. <a target="_blank" rel="noopener" href="https://fxzer.github.io/tsdoc-vitepress/zh/handbooks/handbook-v1/Interfaces">https://fxzer.github.io/tsdoc-vitepress/zh/handbooks/handbook-v1/Interfaces</a>
+<a href="#fnref:3" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="category-chain-item">学习笔记</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/" class="category-chain-item">微信小程序开发</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/" class="print-no-link">#微信小程序开发</a>
+      
+        <a href="/tags/TypeScript/" class="print-no-link">#TypeScript</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>微信小程序开发（五）：TypeScript函数、泛型与接口</div>
+      <div>http://blog.morely.top/2025/08/15/微信小程序开发（五）：TypeScript函数、泛型与接口/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>陌离</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2025年8月15日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2025/08/05/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%EF%BC%88%E5%9B%9B%EF%BC%89%EF%BC%9ATypeScript%E4%B8%AD%E7%9A%84%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1/" title="微信小程序开发（四）：TypeScript中的类与对象">
+                        <span class="hidden-mobile">微信小程序开发（四）：TypeScript中的类与对象</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+    <div id="giscus" class="giscus"></div>
+    <script type="text/javascript">
+      Fluid.utils.loadComments('#giscus', function() {
+        var options = {"repo":"Morely152/morely152.github.io","repo-id":"R_kgDOOXxNNA","category":"Announcements","category-id":"DIC_kwDOOXxNNM4CpNyb","theme-light":"light","theme-dark":"dark","mapping":"pathname","reactions-enabled":1,"emit-metadata":0,"input-position":"top","lang":"zh-CN","loading":"anonymous","crossorigin":"anonymous"};
+        var attributes = {};
+        for (let option in options) {
+          if (!option.startsWith('theme-')) {
+            var key = option.startsWith('data-') ? option : 'data-' + option;
+            attributes[key] = options[option];
+          }
+        }
+        var light = 'light';
+        var dark = 'dark';
+        window.GiscusThemeLight = light;
+        window.GiscusThemeDark = dark;
+        attributes['data-theme'] = document.documentElement.getAttribute('data-user-color-scheme') === 'dark' ? dark : light;
+        for (let attribute in attributes) {
+          var value = attributes[attribute];
+          if (value === undefined || value === null || value === '') {
+            delete attributes[attribute];
+          }
+        }
+        var s = document.createElement('script');
+        s.setAttribute('src', 'https://giscus.app/client.js');
+        s.setAttribute('crossorigin', 'anonymous');
+        for (let attribute in attributes) {
+          s.setAttribute(attribute, attributes[attribute]);
+        }
+        var ss = document.getElementsByTagName('script');
+        var e = ss.length > 0 ? ss[ss.length - 1] : document.head || document.documentElement;
+        e.parentNode.insertBefore(s, e.nextSibling);
+      });
+    </script>
+    <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+      Powered by <a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a> & <a target="_blank" rel="noopener" href="https://github.com/fluid-dev/hexo-theme-fluid">Fluid</a> <br /> ©2025 <a href="https://blog.morely.top/about/">Morely</a> 内容版权归作者所有 
+      <br/>
+      <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+      <script>
+          var now = new Date();
+
+          function createtime() {
+              var grt = new Date("04/15/2025 00:00:00"); //此处修改你的建站时间或者网站上线时间 
+              now.setTime(now.getTime() + 250);
+              days = (now - grt) / 1000 / 60 / 60 / 24;
+              dnum = Math.floor(days);
+              hours = (now - grt) / 1000 / 60 / 60 - (24 * dnum);
+              hnum = Math.floor(hours);
+              if (String(hnum).length == 1) {
+                  hnum = "0" + hnum;
+              }
+              minutes = (now - grt) / 1000 / 60 - (24 * 60 * dnum) - (60 * hnum);
+              mnum = Math.floor(minutes);
+              if (String(mnum).length == 1) {
+                  mnum = "0" + mnum;
+              }
+              seconds = (now - grt) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+              snum = Math.round(seconds);
+              if (String(snum).length == 1) {
+                  snum = "0" + snum;
+              }
+              document.getElementById("timeDate").innerHTML = "本站已安全运行 " + dnum + " 天 ";
+              document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+          }
+          setInterval("createtime()", 250);
+      </script>
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
