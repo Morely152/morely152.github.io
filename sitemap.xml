@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://blog.morely.top/2025/08/16/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%EF%BC%88%E4%B8%83%EF%BC%89%EF%BC%9A%E4%BA%8B%E4%BB%B6%E4%B8%8E%E5%86%92%E6%B3%A1/</loc>
+    <loc>http://blog.morely.top/2025/08/17/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%EF%BC%88%E4%B8%83%EF%BC%89%EF%BC%9A%E4%BA%8B%E4%BB%B6%E4%B8%8E%E5%86%92%E6%B3%A1/</loc>
     
     <lastmod>2025-08-16</lastmod>
     
@@ -312,14 +312,14 @@
   </url>
   
   <url>
-    <loc>http://blog.morely.top/tags/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
+    <loc>http://blog.morely.top/tags/C/</loc>
     <lastmod>2025-08-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://blog.morely.top/tags/C/</loc>
+    <loc>http://blog.morely.top/tags/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
     <lastmod>2025-08-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -363,14 +363,14 @@
   </url>
   
   <url>
-    <loc>http://blog.morely.top/categories/%E7%A2%8E%E7%A2%8E%E5%BF%B5/</loc>
+    <loc>http://blog.morely.top/categories/%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/OBS-Studio/</loc>
     <lastmod>2025-08-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://blog.morely.top/categories/%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/OBS-Studio/</loc>
+    <loc>http://blog.morely.top/categories/%E7%A2%8E%E7%A2%8E%E5%BF%B5/</loc>
     <lastmod>2025-08-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
