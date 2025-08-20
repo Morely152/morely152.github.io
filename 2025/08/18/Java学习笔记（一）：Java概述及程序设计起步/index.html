@@ -19,20 +19,21 @@
   <meta name="author" content="陌离">
   <meta name="keywords" content="">
   
-    <meta name="description" content="声明：本篇笔记部分摘自《Java核心技术（卷Ⅰ） - 机械工业出版社》，遵循CC BY 4.0协议。这本书以及这个系列的笔记会将Java与一些编程语言的特性作比较；建议拥有一定的C&#x2F;C++或其他编程语言的学习基础后，再阅读这本书或这个系列的笔记来学习Java。如果是第一次接触编程语言，建议从相对简单的C语言或Python开始；或者参考一些体系化的视频课程来进行学习，否则会感到有一定的压力。 存在">
+    <meta name="description" content="声明：本篇笔记部分摘自《Java核心技术（卷Ⅰ） - 机械工业出版社》及Java教程-廖雪峰-2025-06-16，遵循CC BY 4.0协议。这本书以及这个系列的笔记会将Java与一些编程语言的特性作比较；建议拥有一定的C&#x2F;C++或其他编程语言的学习基础后，再阅读这本书或这个系列的笔记来学习Java。如果是第一次接触编程语言，建议从相对简单的C语言或Python开始；或者参考一些体系化的视频课">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java学习笔记（一）：Java概述及程序设计起步">
 <meta property="og:url" content="http://blog.morely.top/2025/08/18/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9AJava%E6%A6%82%E8%BF%B0%E5%8F%8A%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%B5%B7%E6%AD%A5/index.html">
 <meta property="og:site_name" content="陌离的个人博客">
-<meta property="og:description" content="声明：本篇笔记部分摘自《Java核心技术（卷Ⅰ） - 机械工业出版社》，遵循CC BY 4.0协议。这本书以及这个系列的笔记会将Java与一些编程语言的特性作比较；建议拥有一定的C&#x2F;C++或其他编程语言的学习基础后，再阅读这本书或这个系列的笔记来学习Java。如果是第一次接触编程语言，建议从相对简单的C语言或Python开始；或者参考一些体系化的视频课程来进行学习，否则会感到有一定的压力。 存在">
+<meta property="og:description" content="声明：本篇笔记部分摘自《Java核心技术（卷Ⅰ） - 机械工业出版社》及Java教程-廖雪峰-2025-06-16，遵循CC BY 4.0协议。这本书以及这个系列的笔记会将Java与一些编程语言的特性作比较；建议拥有一定的C&#x2F;C++或其他编程语言的学习基础后，再阅读这本书或这个系列的笔记来学习Java。如果是第一次接触编程语言，建议从相对简单的C语言或Python开始；或者参考一些体系化的视频课">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://blog.morely.top/2025/08/18/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9AJava%E6%A6%82%E8%BF%B0%E5%8F%8A%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%B5%B7%E6%AD%A5/20250820160152470.png#bc">
 <meta property="og:image" content="http://blog.morely.top/2025/08/18/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9AJava%E6%A6%82%E8%BF%B0%E5%8F%8A%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%B5%B7%E6%AD%A5/20250818125310312.png#sc">
 <meta property="article:published_time" content="2025-08-18T08:31:33.000Z">
-<meta property="article:modified_time" content="2025-08-18T08:36:40.397Z">
+<meta property="article:modified_time" content="2025-08-20T08:30:35.927Z">
 <meta property="article:author" content="陌离">
 <meta property="article:tag" content="微信小程序开发">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://blog.morely.top/2025/08/18/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9AJava%E6%A6%82%E8%BF%B0%E5%8F%8A%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%B5%B7%E6%AD%A5/20250818125310312.png#sc">
+<meta name="twitter:image" content="http://blog.morely.top/2025/08/18/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9AJava%E6%A6%82%E8%BF%B0%E5%8F%8A%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%B5%B7%E6%AD%A5/20250820160152470.png#bc">
   
   
   
@@ -242,7 +243,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          4.6k 字
+          5.6k 字
         
       </span>
     
@@ -253,7 +254,7 @@
         
         
         
-          38 分钟
+          48 分钟
         
       </span>
     
@@ -296,45 +297,48 @@
               <div class="markdown-body">
                 
                 <blockquote>
-<p>声明：本篇笔记部分摘自<a target="_blank" rel="noopener" href="https://detail.tmall.com/item.htm?ali_refid=a3_420434_1006%3A1151895243%3AN%3AoB1xLXSDdjSpCunkFwpZbCtvD%2B6YEaA9%3A39f8fcdda956d1ec63523e9a6e9e2355&amp;id=708821240842&amp;mi_id=0000mg2-P7Ustbzeym2_6DxuUMLCpndkVCAGc5EaA_l8QQ0&amp;mm_sceneid=1_0_128421313_0&amp;priceTId=2147831a17554253371677975e1dca&amp;spm=a21n57.1.hoverItem.2&amp;utparam=%7B%22aplus_abtest%22%3A%226b956865e0df43cd4a6620880d877f11%22%7D&amp;xxc=ad_ztc">《Java核心技术（卷Ⅰ） - 机械工业出版社》</a>，遵循<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by/4.0/legalcode.zh-hans">CC BY 4.0协议</a>。这本书以及这个系列的笔记会将Java与一些编程语言的特性作比较；建议拥有一定的C/C++或其他编程语言的学习基础后，再阅读这本书或这个系列的笔记来学习Java。如果是第一次接触编程语言，建议从相对简单的C语言或Python开始；或者参考一些体系化的视频课程来进行学习，否则会感到有一定的压力。<br />
+<p>声明：本篇笔记部分摘自<a target="_blank" rel="noopener" href="https://detail.tmall.com/item.htm?ali_refid=a3_420434_1006%3A1151895243%3AN%3AoB1xLXSDdjSpCunkFwpZbCtvD%2B6YEaA9%3A39f8fcdda956d1ec63523e9a6e9e2355&amp;id=708821240842&amp;mi_id=0000mg2-P7Ustbzeym2_6DxuUMLCpndkVCAGc5EaA_l8QQ0&amp;mm_sceneid=1_0_128421313_0&amp;priceTId=2147831a17554253371677975e1dca&amp;spm=a21n57.1.hoverItem.2&amp;utparam=%7B%22aplus_abtest%22%3A%226b956865e0df43cd4a6620880d877f11%22%7D&amp;xxc=ad_ztc">《Java核心技术（卷Ⅰ） - 机械工业出版社》</a>及<a target="_blank" rel="noopener" href="https://liaoxuefeng.com/books/java/introduction/index.html">Java教程-廖雪峰-2025-06-16</a>，遵循<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by/4.0/legalcode.zh-hans">CC BY 4.0协议</a>。这本书以及这个系列的笔记会将Java与一些编程语言的特性作比较；建议拥有一定的C/C++或其他编程语言的学习基础后，再阅读这本书或这个系列的笔记来学习Java。如果是第一次接触编程语言，建议从相对简单的C语言或Python开始；或者参考一些体系化的视频课程来进行学习，否则会感到有一定的压力。<br />
 存在由AI生成的小部分内容，仅供参考，请仔细甄别可能存在的错误。</p>
 </blockquote>
-<h1 id="一-java的发展史"><a class="markdownIt-Anchor" href="#一-java的发展史"></a> 一、Java的发展史</h1>
-<h2 id="1-起源19911995"><a class="markdownIt-Anchor" href="#1-起源19911995"></a> <strong>1. 起源（1991–1995）</strong></h2>
+<h1 id="一-java概述"><a class="markdownIt-Anchor" href="#一-java概述"></a> 一、Java概述</h1>
+<h2 id="1java发展史"><a class="markdownIt-Anchor" href="#1java发展史"></a> 1.Java发展史</h2>
+<blockquote>
+<p>Java最早是由SUN公司（已被Oracle收购）的詹姆斯·高斯林（高司令，人称Java之父）在上个世纪 90年代初开发的一种编程语言，最初被命名为Oak，目标是针对小型家电设备的嵌入式应用（结果市场没啥反响）。互联网的崛起让Oak重新焕发了生机，于是SUN公司改造了Oak，由于Oak已经被注册，在1995年以Java的名称正式发布。随着互联网的高速发展，Java逐渐成为最重要的网络编程语言。<br />
+Java介于编译型语言和解释型语言之间。编译型语言如C、C++，代码是直接编译成机器码执行，但是不同的平台（x86、ARM等）CPU的指令集不同，因此，需要编译出每一种平台的对应机器码。解释型语言如Python、Ruby没有这个问题，可以由解释器直接加载源码然后运行，代价是运行效率太低。而Java是将代码编译成一种“字节码”，它类似于抽象的CPU指令，然后，针对不同平台编写虚拟机，不同平台的虚拟机负责加载字节码并执行，这样就实现了“一次编写，到处运行”的效果。当然，这是针对Java开发者而言。对于虚拟机，需要为每个平台分别开发。为了保证不同平台、不同公司开发的虚拟机都能正确执行Java字节码，SUN公司制定了一系列的Java虚拟机规范。从实践的角度看，JVM的兼容性做得非常好，低版本的Java字节码完全可以正常运行在高版本的JVM上。</p>
+</blockquote>
+<p>随着Java的不断发展，出现了三个版本：</p>
 <ul>
-<li><strong>项目名称</strong>：最初由<strong>James Gosling</strong>（詹姆斯·高斯林）在Sun Microsystems（太阳微系统公司）领导开发，命名为<strong>Oak</strong>（橡树），目标是为嵌入式设备（如电视机顶盒）设计一种便携语言。</li>
-<li><strong>改名Java</strong>：因商标冲突，1995年更名为<strong>Java</strong>（灵感来自印尼爪哇岛的咖啡，因此Logo是一杯咖啡）。</li>
-<li><strong>互联网机遇</strong>：随着互联网兴起，Java的<strong>跨平台特性</strong>（通过JVM实现&quot;一次编写，到处运行&quot;）使其迅速成为Web开发的热门选择。</li>
+<li>Java SE: standard edition, 标准版本</li>
+<li>Java EE: enterprise edition, 企业版本</li>
+<li>Java ME: mico edition, 微服务版本</li>
 </ul>
-<h2 id="2-正式发布19952000"><a class="markdownIt-Anchor" href="#2-正式发布19952000"></a> <strong>2. 正式发布（1995–2000）</strong></h2>
+<p>这三者是 <code>Java EE &gt; Java SE &gt; Java ME</code> 的关系，，Java SE就是标准版，包含标准的JVM和标准库，而Java EE是企业版，它在Java SE的基础上添加了大量的API和库，以便方便开发Web应用、数据库、消息服务等，Java EE的应用使用的虚拟机和Java SE完全相同。Java ME就和Java SE不同，它是一个针对嵌入式设备的“瘦身版”，Java SE的标准库无法在Java ME上使用，Java ME的虚拟机也是“瘦身版”。</p>
+<h2 id="2java学习路线"><a class="markdownIt-Anchor" href="#2java学习路线"></a> 2.Java学习路线</h2>
+<p>对于常规的Java软件应用开发者来说，学习Java SE、Java EE就足够了。Java ME的流行程度不高，如果没有特殊需求无需学习。下面是推荐的学习路线：</p>
+<ol>
+<li>首先学习Java SE，掌握Java语言本身、Java核心开发技术以及Java标准库的使用；</li>
+<li>继续学习Java EE，重点学习Spring框架、数据库开发、分布式架构；</li>
+<li>如果打算学习大数据开发，那么Hadoop、Spark、Flink这些大数据平台就是需要学习的，他们都基于Java或Scala开发；</li>
+<li>如果想要学习移动开发，那么就深入Android平台，掌握Android App开发。</li>
+</ol>
+<h2 id="3jdk与jre-jvm"><a class="markdownIt-Anchor" href="#3jdk与jre-jvm"></a> 3.JDK与JRE、JVM</h2>
 <ul>
-<li><strong>1995年</strong>：Sun发布<strong>Java 1.0</strong>，强调<strong>Applet</strong>（在浏览器中运行的小程序），推动早期Web动态交互。</li>
-<li><strong>1996年</strong>：JDK 1.0（Java Development Kit）发布，包含核心库和JVM。</li>
-<li><strong>企业级扩展</strong>：1999年推出<strong>J2EE</strong>（Java 2 Platform Enterprise Edition），支持企业应用开发（如Servlet、EJB）。</li>
+<li>JDK：Java Development Kit，Java程序开发工具包</li>
+<li>JRE：Java Runtime Environment，Java运行时环境</li>
+<li>JVM:Java Virtual Machine，Java虚拟机</li>
 </ul>
-<h2 id="3-成熟与开源20002010"><a class="markdownIt-Anchor" href="#3-成熟与开源20002010"></a> <strong>3. 成熟与开源（2000–2010）</strong></h2>
+<p>打个简单的比方，JDK类似于厨房里的食材和食谱（标准类库和方法），我们可以用来设计各种菜品（源代码）；JRE是餐厅，让厨师有地方做菜，并且能够让顾客有地方享受美食（运行环境）；JVM就是制作食物的厨师，负责将我们设计的菜品做成食物（编译执行）。</p>
+<p>与上面例子稍有不同的是，JDK中也包含了JRE与调试器、编译器等开发工具，而JRE当然是包含JVM的了。即：我们通过JDK编写代码，在JRE中经过JVM的编译之后再运行。它们之间的关系如下图：</p>
+<p><img src="20250820160152470.png#bc" srcset="/img/loading.gif" lazyload alt="" /></p>
+<p>玩过Java版MC的同学应该都知道，在启动游戏之前会检查Java版本，这里的“Java版本”指的是JRE，即我们需要准备好在自己的电脑上运行Java的环境。</p>
+<h2 id="4jsr与jcp"><a class="markdownIt-Anchor" href="#4jsr与jcp"></a> 4.JSR与JCP</h2>
 <ul>
-<li><strong>版本演进</strong>：
-<ul>
-<li>J2SE 1.4（2002）：引入<strong>NIO</strong>、正则表达式等。</li>
-<li>Java 5（2004）：重大更新，支持<strong>泛型</strong>、<strong>注解</strong>、<strong>枚举</strong>等。</li>
+<li>JSR：Java Specification Request，Java规范要求</li>
+<li>JCP：Java Community Process，Java社区组织</li>
 </ul>
-</li>
-<li><strong>开源化</strong>：2006年Sun将Java部分开源，2007年完成全部开源（OpenJDK）。</li>
-<li><strong>2009年</strong>：Oracle收购Sun Microsystems，成为Java的主要维护者。</li>
-</ul>
-<h2 id="4-现代java2010至今"><a class="markdownIt-Anchor" href="#4-现代java2010至今"></a> <strong>4. 现代Java（2010至今）</strong></h2>
-<ul>
-<li><strong>版本加速</strong>：
-<ul>
-<li><strong>Java 8</strong>（2014）：里程碑版本，引入<strong>Lambda表达式</strong>、<strong>Stream API</strong>、<strong>新的日期时间API</strong>。</li>
-<li><strong>Java 11</strong>（2018）：首个长期支持（LTS）版本，Oracle调整发布周期（每半年一版，每3年一个LTS）。</li>
-<li><strong>Java 17</strong>（2021）：最新LTS版本，增强模式匹配、密封类等。</li>
-</ul>
-</li>
-<li><strong>生态繁荣</strong>：Spring框架、Android开发（早期基于Java）、大数据（Hadoop）等广泛应用。</li>
-</ul>
-<h2 id="java白皮书"><a class="markdownIt-Anchor" href="#java白皮书"></a> <a target="_blank" rel="noopener" href="https://www.oracle.com/java/technologies/javase/javase-whitepapers.html">Java白皮书</a>上提到的11个关键术语</h2>
+<p>为了保证Java语言有良好的可拓展性和可移植性，需要很高的代码规范性。JSR这一规范就规定了开发者在为Java添砖加瓦时的代码功能。JCP这一组织的任务之一就是审核和修订JSR。</p>
+<h2 id="5java的特点"><a class="markdownIt-Anchor" href="#5java的特点"></a> 5.Java的特点</h2>
+<p>下面是<a target="_blank" rel="noopener" href="https://www.oracle.com/java/technologies/javase/javase-whitepapers.html">Java白皮书</a>上提到的11个关键术语，描述了Java这门编程语言的一些特点：</p>
 <ul>
 <li>简单性</li>
 <li>面向对象</li>
@@ -363,6 +367,14 @@
 <blockquote>
 <p>当我们运行Java程序时，可以在命令行（或终端）后面附加参数，这些参数会被传递给<code>main</code>方法，如<code>java HelloWorld arg1 arg2 arg3</code>，这里的<code>agr1 arg2 arg3</code>会作为字符串数组<code>String[]</code>传进<code>main</code>方法。Java规范要求<code>main</code>方法的签名必须如此，作为程序的统一入口点。即使我们不使用它，也需要声明，否则JVM无法识别<code>main</code>方法。</p>
 </blockquote>
+<h2 id="如何运行这个程序"><a class="markdownIt-Anchor" href="#如何运行这个程序"></a> 如何运行这个程序？</h2>
+<p>或许有同学会觉得“这不是明摆着吗，点一下VS Code或者IDEA右上角的按钮就可以了啊，有啥好说的”，但实际上&quot;点一下按钮&quot;的背后，是IDE自动为我们执行了一些编译和启动的命令。为了让我们更好地理解Java程序编译运行的过程，深化对上面JDK与JVM的理解，探讨一下如何通过这些命令的方式来运行是很有必要的。</p>
+<p>Java源码本质上是一个文本文件，我们需要先用 <code>javac</code> 把 <code>HelloWorld.java</code> 编译成字节码文件 <code>HelloWorld.class</code> ，然后，用 <code>java</code> 命令执行这个字节码文件：</p>
+<p>首先进入源代码所在的目录，执行这一个命令将Java程序编译成字节码：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">javac HelloWorld.java<br></code></pre></td></tr></table></figure>
+<p>可以看到源代码所在的目录下出现了一个同名文件<code>HelloWorld.class</code>，这就是编译之后的字节码文件。执行这一句命令来通过JVM运行字节码程序：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">java HelloWorld<br></code></pre></td></tr></table></figure>
+<p>注意：给虚拟机传递的参数 <code>HelloWorld</code> 是我们定义的类名而不是文件名（不需要.class的后缀），虚拟机自动查找对应的class文件并执行。</p>
 <h1 id="三-注释"><a class="markdownIt-Anchor" href="#三-注释"></a> 三、注释</h1>
 <p>与C/C++类似，Java中的注释也有这两种方式：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// 单行注释</span><br><br><span class="hljs-comment">/*</span><br><span class="hljs-comment">	多行注释</span><br><span class="hljs-comment">	多行注释</span><br><span class="hljs-comment">	多行注释</span><br><span class="hljs-comment">*/</span><br></code></pre></td></tr></table></figure>
@@ -610,8 +622,22 @@
 <li>^：按位异或（xor）</li>
 <li>~：按位非（not）</li>
 <li>&lt;&lt;：左移操作</li>
-<li>&gt;&gt;：右移操作，高位以符号位补充，又称算数移位</li>
-<li>&gt;&gt;&gt;：右移操作，高位以0补充，又称逻辑移位</li>
+<li>
+<blockquote>
+<blockquote>
+<p>：右移操作，高位以符号位补充，又称算数移位</p>
+</blockquote>
+</blockquote>
+</li>
+<li>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>：右移操作，高位以0补充，又称逻辑移位</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
 </ul>
 <h2 id="7条件运算符三元表达式"><a class="markdownIt-Anchor" href="#7条件运算符三元表达式"></a> 7.条件运算符（三元表达式）</h2>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java">条件 ? 条件为真的操作 : 条件为假的操作;<br></code></pre></td></tr></table></figure>
@@ -623,7 +649,10 @@
 <li><code>+=</code>系列的优先级是<strong>从右向左</strong>，即<code>a += b += c</code>的处理顺序是<code>a += (b += c)</code>，先处理<code>b += c</code>,即 <code>b = b + c</code>,然后把现在 <code>b</code> 完成加法操作之后的值加到 <code>a</code> 上。除此之外，<code>+=</code> 这个系列的符号也是<strong>从右往左</strong>处理的。</li>
 <li><code>&amp;&amp;</code>的优先级高于 <code>||</code>。</li>
 </ul>
-
+<hr />
+<h1 id="参考资料"><a class="markdownIt-Anchor" href="#参考资料"></a> 参考资料</h1>
+<section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span>廖雪峰的官方网站.Java教程[EB/OL].(2025-06-07)[2025-08-20]. <a target="_blank" rel="noopener" href="https://www.cnblogs.com/echolun/p/12709761.html">https://www.cnblogs.com/echolun/p/12709761.html</a>
+<a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
                 
               </div>
             
