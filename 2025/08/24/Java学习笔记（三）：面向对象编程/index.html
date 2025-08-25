@@ -19,18 +19,18 @@
   <meta name="author" content="陌离">
   <meta name="keywords" content="">
   
-    <meta name="description" content="声明：本篇笔记部分摘自《Java核心技术（卷Ⅰ） - 机械工业出版社》，遵循CC BY 4.0协议。 存在由AI生成的小部分内容，仅供参考，请仔细甄别可能存在的错误。从本节开始，所有的代码片段都尽量保证完整性，可以直接复制粘贴到IDEA中运行（文件名需为Demo.java以便编译器能找到主类）。代码片段均经过实机运行检测，若运行结果与示例不同，欢迎在文末的评论区指出错误。  第一节 面向对象基础">
+    <meta name="description" content="声明：本篇笔记部分摘自《Java核心技术（卷Ⅰ） - 机械工业出版社》及Java教程-廖雪峰-2025-06-16，遵循CC BY 4.0协议。 存在由AI生成的小部分内容，仅供参考，请仔细甄别可能存在的错误。从本节开始，所有的代码片段都尽量保证完整性，可以直接复制粘贴到IDEA中运行（文件名需为Demo.java以便编译器能找到主类）。代码片段均经过实机运行检测，若运行结果与示例不同，欢迎在文">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java学习笔记（三）：面向对象编程">
 <meta property="og:url" content="http://blog.morely.top/2025/08/24/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%89%EF%BC%89%EF%BC%9A%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/index.html">
 <meta property="og:site_name" content="陌离的个人博客">
-<meta property="og:description" content="声明：本篇笔记部分摘自《Java核心技术（卷Ⅰ） - 机械工业出版社》，遵循CC BY 4.0协议。 存在由AI生成的小部分内容，仅供参考，请仔细甄别可能存在的错误。从本节开始，所有的代码片段都尽量保证完整性，可以直接复制粘贴到IDEA中运行（文件名需为Demo.java以便编译器能找到主类）。代码片段均经过实机运行检测，若运行结果与示例不同，欢迎在文末的评论区指出错误。  第一节 面向对象基础">
+<meta property="og:description" content="声明：本篇笔记部分摘自《Java核心技术（卷Ⅰ） - 机械工业出版社》及Java教程-廖雪峰-2025-06-16，遵循CC BY 4.0协议。 存在由AI生成的小部分内容，仅供参考，请仔细甄别可能存在的错误。从本节开始，所有的代码片段都尽量保证完整性，可以直接复制粘贴到IDEA中运行（文件名需为Demo.java以便编译器能找到主类）。代码片段均经过实机运行检测，若运行结果与示例不同，欢迎在文">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://blog.morely.top/2025/08/24/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%89%EF%BC%89%EF%BC%9A%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/20250821160749656.png#sc">
 <meta property="og:image" content="http://blog.morely.top/2025/08/24/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%89%EF%BC%89%EF%BC%9A%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/20250822100201538.png#sc">
 <meta property="og:image" content="http://blog.morely.top/2025/08/24/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%89%EF%BC%89%EF%BC%9A%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/20250823165958211.png#bc">
 <meta property="article:published_time" content="2025-08-24T15:34:00.000Z">
-<meta property="article:modified_time" content="2025-08-24T15:37:17.046Z">
+<meta property="article:modified_time" content="2025-08-25T06:18:24.407Z">
 <meta property="article:author" content="陌离">
 <meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary_large_image">
@@ -298,7 +298,7 @@
               <div class="markdown-body">
                 
                 <blockquote>
-<p>声明：本篇笔记部分摘自<a target="_blank" rel="noopener" href="https://detail.tmall.com/item.htm?ali_refid=a3_420434_1006%3A1151895243%3AN%3AoB1xLXSDdjSpCunkFwpZbCtvD%2B6YEaA9%3A39f8fcdda956d1ec63523e9a6e9e2355&amp;id=708821240842&amp;mi_id=0000mg2-P7Ustbzeym2_6DxuUMLCpndkVCAGc5EaA_l8QQ0&amp;mm_sceneid=1_0_128421313_0&amp;priceTId=2147831a17554253371677975e1dca&amp;spm=a21n57.1.hoverItem.2&amp;utparam=%7B%22aplus_abtest%22%3A%226b956865e0df43cd4a6620880d877f11%22%7D&amp;xxc=ad_ztc">《Java核心技术（卷Ⅰ） - 机械工业出版社》</a>，遵循<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by/4.0/legalcode.zh-hans">CC BY 4.0协议</a>。<br />
+<p>声明：本篇笔记部分摘自<a target="_blank" rel="noopener" href="https://detail.tmall.com/item.htm?ali_refid=a3_420434_1006%3A1151895243%3AN%3AoB1xLXSDdjSpCunkFwpZbCtvD%2B6YEaA9%3A39f8fcdda956d1ec63523e9a6e9e2355&amp;id=708821240842&amp;mi_id=0000mg2-P7Ustbzeym2_6DxuUMLCpndkVCAGc5EaA_l8QQ0&amp;mm_sceneid=1_0_128421313_0&amp;priceTId=2147831a17554253371677975e1dca&amp;spm=a21n57.1.hoverItem.2&amp;utparam=%7B%22aplus_abtest%22%3A%226b956865e0df43cd4a6620880d877f11%22%7D&amp;xxc=ad_ztc">《Java核心技术（卷Ⅰ） - 机械工业出版社》</a>及<a target="_blank" rel="noopener" href="https://liaoxuefeng.com/books/java/introduction/index.html">Java教程-廖雪峰-2025-06-16</a>，遵循<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by/4.0/legalcode.zh-hans">CC BY 4.0协议</a>。<br />
 存在由AI生成的小部分内容，仅供参考，请仔细甄别可能存在的错误。从本节开始，所有的代码片段都尽量保证完整性，可以直接复制粘贴到IDEA中运行（文件名需为Demo.java以便编译器能找到主类）。代码片段均经过实机运行检测，若运行结果与示例不同，欢迎在文末的评论区指出错误。</p>
 </blockquote>
 <center><h1>第一节 面向对象基础</h1></center>
@@ -1082,6 +1082,12 @@ M834 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">�
                 <div class="post-prevnext my-3">
                   <article class="post-prev col-6">
                     
+                    
+                      <a href="/2025/08/25/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E5%9B%9B%EF%BC%89%EF%BC%9A%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/" title="Java学习笔记（四）：异常处理">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Java学习笔记（四）：异常处理</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
                     
                   </article>
                   <article class="post-next col-6">
